@@ -7,6 +7,9 @@
   --verde: #b9cf65;
   --linha: rgba(9, 45, 76, 0.22);
   --sombra: 0 22px 55px rgba(9, 45, 76, 0.14);
+  --fonte-primaria: "Inter", sans-serif;
+  --fonte-segundaria: "Gaegu", cursive;
+  --tamanho-fonte-segundaria: 2.2rem;
 }
 
 * {
@@ -25,7 +28,7 @@ body {
   overflow-x: hidden;
   color: #102233;
   background: var(--off-white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-primaria)
 }
 
 a {
@@ -80,9 +83,8 @@ button {
   animation: logoEntrada 1.2s ease infinite alternate;
 }
 
-.entrada span,
-.rabisco {
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+.entrada span {
+  font-family: var(--fonte-segundaria);
   letter-spacing: 0.04em;
 }
 

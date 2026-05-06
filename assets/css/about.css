@@ -6,11 +6,17 @@
   align-items: center;
 }
 
-.sobre h1 {
+.sobre h2 {
   margin: 0;
-  color: rgba(9, 45, 76, 0.08);
-  font-size: clamp(4rem, 8vw, 9rem);
+  color: rgb(9, 45, 76);
+  font-size: 10rem;
   line-height: 0.95;
+  font-weight: 450;
+  letter-spacing: -4px;
+}
+
+.sobre h2 strong {
+  font-weight: 700;
 }
 
 .pronuncia {
@@ -21,7 +27,12 @@
   max-width: 760px;
   margin: 34px 0 0;
   line-height: 1.8;
-  font-size: 1.05rem;
+  letter-spacing: -1.5px;
+  font-size: var(--tamanho-fonte-segundaria);
+}
+
+.fiap{
+  color: var(--coral);
 }
 
 .selos {
@@ -39,7 +50,8 @@
   padding: 14px;
   border: 3px solid currentColor;
   color: var(--azul);
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-family: var(--fonte-segundaria);
+  font-size: 2rem;
   font-weight: 800;
   text-align: center;
   transform: rotate(-6deg);
@@ -48,15 +60,26 @@
 .selos span:nth-child(2) {
   color: var(--coral);
   transform: rotate(4deg);
+  transition: 0.4s ease;
 }
 
-.selos span:nth-child(3) {
+.selos span:nth-child(4) {
   color: #6d8f2c;
   transform: rotate(-2deg);
 }
 
+.selos span:nth-child(2):hover{
+  transition: 0.4s ease;
+  scale: 1.03;
+  color: var(--off-white);
+  background-color: var(--coral);
+  transform: rotate(-2deg);
+
+}
+
 .botao-cv {
-  display: inline-flex;
+  font-size: 1.5rem;
+  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 44px;
@@ -67,11 +90,19 @@
   color: var(--azul);
   background: transparent;
   cursor: pointer;
+   transition: 0.3s;
+}
+
+.fa-download{
+  margin: 0.2%;
+
 }
 
 .botao-cv:hover {
   color: var(--off-white);
   background: var(--azul);
+  transition: 0.3s;
+  transform: scale(1.02);
 }
 
 .faixa-palavras {

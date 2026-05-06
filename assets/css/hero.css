@@ -15,16 +15,16 @@
 .hero-boas-vindas h1 {
   margin: 0;
   color: #111;
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
-  font-size: 10rem;
+  font-family: var(--fonte-segundaria);
+  font-size: 20rem;
   line-height: 0.82;
 }
 
 .assinatura-hero {
   margin: -18px 0 0;
-  color: #7b0909;
-  font-family: "Brush Script MT", "Comic Sans MS", cursive;
-  font-size: clamp(3rem, 7vw, 7.6rem);
+  color: var(--azul);
+  font-family: var(--fonte-segundaria);
+  font-size: 9rem;
   line-height: 0.8;
   transform: rotate(-3deg);
 }
@@ -40,9 +40,26 @@
   border: 1px solid var(--azul);
   border-radius: 50%;
   color: var(--azul);
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-family: var(--fonte-segundaria);
   text-align: center;
   transform: rotate(8deg);
+  font-size: var(--tamanho-fonte-segundaria);
+  transition: 0.5s ease-in;
+
+}
+
+.botao-scroll:hover{
+  background-color: var(--azul);
+  color: var(--off-white);
+  transition: 0.5s ease-in;
+  scale: 1.1;
+}
+
+.rabisco {
+  font-family: var(--fonte-segundaria);
+  color: var(--verde);
+  font-size: 3rem;
+  letter-spacing: 0.04em;
 }
 
 @media (max-width: 640px) {
