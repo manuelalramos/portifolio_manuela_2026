@@ -1,0 +1,46 @@
+.contato {
+  min-height: 80vh;
+  display: grid;
+  align-content: center;
+}
+
+.contato h2 {
+  max-width: 1000px;
+  margin: 0;
+  color: var(--azul-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 10vw, 10rem);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--azul);
+  border-radius: 999px;
+  color: var(--azul);
+  background: transparent;
+  cursor: pointer;
+}
+
+.links a:hover {
+  color: var(--off-white);
+  background: var(--azul);
+}
+
+@media (max-width: 640px) {
+  .contato h2 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+}

@@ -1,0 +1,178 @@
+.home-projetos {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  scroll-margin-top: 84px;
+}
+
+.home-projetos h2 {
+  max-width: 980px;
+  margin: 0 auto;
+  color: var(--azul-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.home-pastas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: clamp(28px, 5vw, 70px);
+  width: min(1120px, 100%);
+  margin: clamp(50px, 7vw, 86px) auto 0;
+}
+
+.home-folder {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  color: #111;
+}
+
+.home-folder strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.pasta-home {
+  position: relative;
+  display: block;
+  width: min(210px, 100%);
+  height: 175px;
+}
+
+.home-miolo,
+.home-frente {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.home-miolo {
+  top: 0;
+  height: 74%;
+  border-radius: 16px 18px 12px 12px;
+  background: color-mix(in srgb, var(--folder-color) 82%, white);
+  transition: transform 0.28s ease;
+}
+
+.home-miolo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width: 42%;
+  height: 40px;
+  border-radius: 16px 24px 0 0;
+  background: color-mix(in srgb, var(--folder-color) 78%, white);
+}
+
+.home-frente {
+  bottom: 0;
+  z-index: 3;
+  height: 68%;
+  border-radius: 16px;
+  background: var(--folder-color);
+  box-shadow: 0 18px 30px rgba(9, 45, 76, 0.12);
+  transition: transform 0.28s ease;
+}
+
+.papel {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 92px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fffaf3;
+  box-shadow: 0 10px 18px rgba(9, 45, 76, 0.1);
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-size: 0.8rem;
+  font-weight: 800;
+  transition: transform 0.28s ease;
+}
+
+.papel-um {
+  left: 18px;
+  top: -8px;
+  transform: rotate(-8deg);
+}
+
+.papel-dois {
+  left: 66px;
+  top: -24px;
+  background: #dcecf4;
+  transform: rotate(7deg);
+}
+
+.papel-tres {
+  right: 18px;
+  top: -6px;
+  background: #fff4e8;
+  transform: rotate(12deg);
+}
+
+.home-folder:hover .home-miolo,
+.home-folder:focus-visible .home-miolo {
+  transform: translateY(-10px);
+}
+
+.home-folder:hover .home-frente,
+.home-folder:focus-visible .home-frente {
+  transform: translateY(24px);
+}
+
+.home-folder:hover .papel-um,
+.home-folder:focus-visible .papel-um {
+  transform: translateY(-36px) rotate(-12deg);
+}
+
+.home-folder:hover .papel-dois,
+.home-folder:focus-visible .papel-dois {
+  transform: translateY(-54px) rotate(8deg);
+}
+
+.home-folder:hover .papel-tres,
+.home-folder:focus-visible .papel-tres {
+  transform: translateY(-40px) rotate(14deg);
+}
+
+.folder-rosa {
+  --folder-color: #f7c7d4;
+}
+
+.folder-verde {
+  --folder-color: #94bdaa;
+}
+
+.folder-amarelo {
+  --folder-color: #f6d989;
+}
+
+.folder-azul {
+  --folder-color: #a9dcf0;
+}
+
+@media (max-width: 900px) {
+  .home-pastas {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-pastas {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .pasta-home {
+    width: 210px;
+  }
+}

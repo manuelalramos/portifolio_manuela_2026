@@ -1,0 +1,146 @@
+.case-scroll {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1fr);
+  gap: clamp(34px, 7vw, 100px);
+  align-items: start;
+  min-height: 140vh;
+  border-top: 1px solid var(--linha);
+  scroll-margin-top: 90px;
+}
+
+.primeira-case {
+  padding-top: 180px;
+}
+
+.case-info {
+  position: sticky;
+  top: 118px;
+  min-height: 62vh;
+  display: grid;
+  align-content: center;
+}
+
+.case-info h1,
+.case-info h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-size: clamp(3.8rem, 6.5vw, 7rem);
+  line-height: 0.8;
+}
+
+.case-info p {
+  max-width: 520px;
+  margin: 34px 0 0;
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  line-height: 1.55;
+}
+
+.case-info span {
+  width: fit-content;
+  margin-top: 28px;
+  padding: 10px 16px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: #7b0909;
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-weight: 800;
+}
+
+.case-imagens {
+  display: grid;
+  gap: clamp(30px, 5vw, 72px);
+  padding: 6vh 0 20vh;
+}
+
+.case-imagens figure {
+  position: relative;
+  min-height: 560px;
+  display: grid;
+  place-items: end start;
+  margin: 0;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.56), transparent),
+    #fff4e8;
+  box-shadow: var(--sombra);
+}
+
+.case-imagens figure:nth-child(2n) {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.52), transparent),
+    var(--azul-claro);
+}
+
+.case-imagens figure::before {
+  content: "image.png";
+  color: rgba(9, 45, 76, 0.28);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 8vw, 8rem);
+  font-style: italic;
+}
+
+.case-imagens .wide {
+  min-height: 620px;
+}
+
+.case-imagens img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-imagens figcaption {
+  position: relative;
+  z-index: 2;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: var(--azul-escuro);
+  background: rgba(251, 247, 239, 0.86);
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .case-scroll {
+    grid-template-columns: 1fr;
+  }
+
+  .case-info {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-scroll {
+    min-height: auto;
+    gap: 28px;
+  }
+
+  .case-info h1,
+  .case-info h2 {
+    font-size: clamp(3.6rem, 17vw, 5rem);
+  }
+
+  .case-info p {
+    font-size: 1rem;
+  }
+
+  .case-imagens {
+    padding: 12px 0 48px;
+  }
+
+  .case-imagens figure,
+  .case-imagens .wide {
+    min-height: 360px;
+  }
+}

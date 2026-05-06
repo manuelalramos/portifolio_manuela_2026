@@ -10,7 +10,17 @@ Este projeto e uma landing page artistica em HTML, CSS e JavaScript com visual d
 - `assets/pages/ux.html`: pagina dos projetos de UI/UX.
 - `assets/pages/ads.html`: pagina dos projetos de ADS.
 - `assets/pages/codigo.html`: pagina dos projetos de Codigo.
-- `assets/css/styles.css`: cores, tamanhos, animacoes, pastas e responsividade.
+- `assets/css/base.css`: estilos globais, entrada e variaveis.
+- `assets/css/menu.css`: navbar e dropdown de projetos.
+- `assets/css/hero.css`: primeira dobra do site, o hero.
+- `assets/css/about.css`: secao About, faixa de palavras e creative license.
+- `assets/css/files.css`: pastas de projetos.
+- `assets/css/projetos.css`: pagina indice de projetos.
+- `assets/css/instagram.css`: pagina de projetos de Instagram.
+- `assets/css/ux.css`: pagina de projetos de UI/UX.
+- `assets/css/ads.css`: pagina de projetos de ADS.
+- `assets/css/codigo.css`: pagina de projetos de Codigo.
+- `assets/css/contact.css`: secao de contato.
 - `assets/js/script.js`: luz do mouse, entrada animada e navbar com fundo ao rolar.
 - `LOGO.svg`: sua logo.
 
