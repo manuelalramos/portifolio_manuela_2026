@@ -5,51 +5,77 @@ Este projeto e uma landing page artistica em HTML, CSS e JavaScript com visual d
 ## Arquivos
 
 - `index.html`: conteudo da pagina, secoes, menu e textos.
-- `styles.css`: cores, tamanhos, animacoes, passaporte visual e responsividade.
-- `script.js`: cards de projetos, modal de detalhes, galeria de Instagram, luz do mouse, posters arrastaveis e navbar com fundo ao rolar.
+- `assets/pages/projetos.html`: indice das categorias de projeto.
+- `assets/pages/instagram.html`: pagina dos projetos de Instagram.
+- `assets/pages/ux.html`: pagina dos projetos de UI/UX.
+- `assets/pages/ads.html`: pagina dos projetos de ADS.
+- `assets/pages/codigo.html`: pagina dos projetos de Codigo.
+- `assets/css/styles.css`: cores, tamanhos, animacoes, pastas e responsividade.
+- `assets/js/script.js`: luz do mouse, entrada animada e navbar com fundo ao rolar.
 - `LOGO.svg`: sua logo.
 
 ## Onde editar os projetos
 
-Abra `script.js` e procure por:
+Os atalhos em formato de pasta ficam na Home, dentro de `index.html`, na secao:
 
-```js
-const projetos = [
+```txt
+home-projetos
 ```
 
-Cada projeto segue este modelo:
+A pagina indice fica em `assets/pages/projetos.html`.
 
-```js
-{
-  titulo: "Nome do projeto",
-  categoria: "instagram",
-  tipo: "design e marketing",
-  sigla: "IG",
-  cor: "#ec6f66",
-  resumo: "Texto curto que aparece no card.",
-  texto: "Descricao maior que aparece nos detalhes.",
-  acao: "galeria",
-  botao: "abrir galeria"
-}
+Cada tipo de projeto tem uma pagina propria:
+
+- `assets/pages/instagram.html`: galeria de posts.
+- `assets/pages/ux.html`: projeto visual no estilo de case.
+- `assets/pages/ads.html`: trabalhos da faculdade.
+- `assets/pages/codigo.html`: projetos de programacao.
+
+O menu do topo tambem tem um dropdown em `projetos`, com link direto para cada uma dessas paginas.
+
+Cada pagina usa esta ideia:
+
+- lado esquerdo: texto do projeto.
+- lado direito: imagens que aparecem durante o scroll.
+- para trocar imagem, coloque o arquivo na pasta certa ou mude o `src` da imagem no HTML.
+
+## Pastas de imagens
+
+A pagina de projetos ja procura imagens nestas pastas:
+
+```txt
+projetos/instagram/image.png
+projetos/instagram/post-01.png
+projetos/instagram/post-02.png
+projetos/instagram/post-03.png
+projetos/instagram/banner-01.png
+
+projetos/ux/image.png
+projetos/ux/desktop.png
+projetos/ux/mobile.png
+projetos/ux/processo.png
+
+projetos/ads/image.png
+projetos/ads/logica.png
+projetos/ads/documentacao.png
+
+projetos/codigo/image.png
+projetos/codigo/game.png
 ```
 
-- `acao: "galeria"` leva para a galeria de Instagram.
-- `acao: "codigo"` leva para a area de codigo.
-- `acao: "detalhes"` abre o modal com mais informacoes.
+Se a imagem ainda nao existir, o site continua funcionando com o visual de pasta e placeholder.
 
-## Galeria de Instagram
+## About e creative license
 
-No `script.js`, procure por:
+O About agora espera uma imagem pronta da carteira.
 
-```js
-const postsInstagram = [
+Salve sua arte na pasta com este nome:
+
+```txt
+creative-license.png
 ```
 
-Por enquanto os posts sao blocos coloridos. Quando voce tiver imagens reais, coloque os arquivos na pasta e depois trocamos esses blocos por imagens.
-
-## About e passaporte
-
-O passaporte atual foi feito com HTML e CSS porque nao havia um arquivo de passaporte na pasta. Quando voce colocar a imagem real na pasta, da para substituir a div `.passaporte` por uma imagem.
+Quando esse arquivo existir, o site mostra a imagem automaticamente. Se ele ainda nao existir, aparece um placeholder dizendo onde colocar.
 
 ## CV
 

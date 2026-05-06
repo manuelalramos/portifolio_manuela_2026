@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manuela | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="fundo-papel"></div>
@@ -12,58 +12,39 @@
 
     <div class="entrada" id="entrada">
       <img src="LOGO.svg" alt="Manuela" />
-      <span>carregando portfolio</span>
+      <span>abrindo portfolio</span>
     </div>
 
     <header class="topo" id="topo">
-      <a class="logo-link" href="#inicio" aria-label="Voltar ao inicio">
+      <a class="logo-link" href="index.html#inicio" aria-label="Voltar ao inicio">
         <img src="LOGO.svg" alt="Manuela Digital Design & Web Development" />
       </a>
 
       <nav class="menu" aria-label="Menu principal">
-        <a href="#inicio">home</a>
-        <a href="#sobre">about</a>
-        <a href="#projetos">projetos</a>
-        <a href="#codigo">codigo</a>
-        <a href="#contato">contato</a>
+        <a href="index.html#inicio">home</a>
+        <a href="index.html#sobre">about</a>
+        <div class="menu-dropdown">
+          <a href="assets/pages/projetos.html">projetos</a>
+          <div class="submenu">
+            <a href="assets/pages/instagram.html">instagram</a>
+            <a href="assets/pages/ux.html">ui/ux</a>
+            <a href="assets/pages/ads.html">ads</a>
+            <a href="assets/pages/codigo.html">codigo</a>
+          </div>
+        </div>
+        <a href="index.html#contato">contato</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" id="inicio">
-        <p class="ano rabisco">2026</p>
-
-        <div class="titulo-hero">
-          <span>Visual</span>
-          <strong>Journey</strong>
-          <em>Manuela</em>
+        <div class="hero-boas-vindas">
+          <p class="rabisco detalhe">welcome to my portfolio</p>
+          <h1>HEY THERE!</h1>
+          <p class="assinatura-hero">scroll to meet me</p>
         </div>
 
-        <p class="seta-texto">arraste os posters</p>
-
-        <div class="colagem" aria-label="Colagem de areas do portfolio">
-          <button class="peca peca-um" type="button" data-peca data-destino="#projetos">
-            <span>Social media</span>
-            <strong>posts</strong>
-          </button>
-
-          <button class="peca peca-dois" type="button" data-peca data-destino="#projetos">
-            <span>FIAP ADS</span>
-            <strong>projetos</strong>
-          </button>
-
-          <button class="peca peca-tres" type="button" data-peca data-destino="#codigo">
-            <span>Front-end</span>
-            <strong>web</strong>
-          </button>
-
-          <button class="peca peca-quatro" type="button" data-peca data-destino="#sobre">
-            <span>About</span>
-            <strong>me</strong>
-          </button>
-        </div>
-
-        <a class="botao-scroll" href="#projetos">ver projetos</a>
+        <a class="botao-scroll" href="#sobre">descer</a>
       </section>
 
       <section class="sobre secao" id="sobre">
@@ -87,22 +68,18 @@
           <a class="botao-cv" href="CV-Manuela.pdf" download>baixar CV</a>
         </div>
 
-        <div class="passaporte" aria-label="Espaco para passaporte visual">
-          <div class="passaporte-pagina pagina-carimbos">
-            <span class="carimbo c1">WEB</span>
-            <span class="carimbo c2">ADS</span>
-            <span class="carimbo c3">UX</span>
-            <span class="carimbo c4">SOCIAL</span>
-          </div>
-
-          <div class="passaporte-pagina pagina-dados">
-            <div class="foto-passaporte">sua foto</div>
-            <div class="linhas-passaporte">
-              <p><strong>name</strong> Manuela</p>
-              <p><strong>based in</strong> Sao Paulo, BR</p>
-              <p><strong>study</strong> FIAP ADS</p>
-              <p><strong>focus</strong> digital design + web</p>
-              <p><strong>status</strong> portfolio in progress</p>
+        <div class="license-wrap" aria-label="Creative license visual">
+          <div class="license-image-card">
+            <img
+              src="creative-license.png"
+              alt="Carteira creative license da Manuela"
+              onload="this.nextElementSibling.style.display='none'"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'"
+            />
+            <div class="license-placeholder">
+              <span class="rabisco">creative license</span>
+              <strong>coloque sua imagem aqui</strong>
+              <p>Salve a arte na pasta com o nome <b>creative-license.png</b>.</p>
             </div>
           </div>
         </div>
@@ -117,48 +94,58 @@
         </div>
       </section>
 
-      <section class="projetos secao" id="projetos">
-        <p class="rabisco detalhe">escolha seu caminho</p>
-        <h2>PROJETOS</h2>
-        <p class="subtitulo-projetos">Escolha qual projeto voce quer ir.</p>
+      <section class="home-projetos secao" id="home-projetos">
+        <p class="rabisco detalhe">tucked inside my folders</p>
+        <h2>Escolha uma pasta.</h2>
 
-        <div class="cards-projetos" id="cardsProjetos"></div>
-      </section>
+        <div class="home-pastas" aria-label="Pastas de projetos">
+          <a class="home-folder folder-rosa" href="assets/pages/instagram.html">
+            <span class="pasta-home">
+              <span class="home-miolo">
+                <span class="papel papel-um">post</span>
+                <span class="papel papel-dois">feed</span>
+                <span class="papel papel-tres">ads</span>
+              </span>
+              <span class="home-frente"></span>
+            </span>
+            <strong>Instagram</strong>
+          </a>
 
-      <section class="galeria-instagram secao" id="instagram">
-        <div>
-          <p class="rabisco detalhe">galeria de posts</p>
-          <h2>Instagram gallery</h2>
-        </div>
-        <div class="grade-instagram" id="gradeInstagram"></div>
-      </section>
+          <a class="home-folder folder-verde" href="assets/pages/ux.html">
+            <span class="pasta-home">
+              <span class="home-miolo">
+                <span class="papel papel-um">figma</span>
+                <span class="papel papel-dois">wire</span>
+                <span class="papel papel-tres">ux</span>
+              </span>
+              <span class="home-frente"></span>
+            </span>
+            <strong>UI/UX</strong>
+          </a>
 
-      <section class="codigo secao" id="codigo">
-        <div class="janela-codigo">
-          <div class="bolinhas">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <pre><code>const portfolio = {
-  criadora: "Manuela",
-  areas: ["design", "marketing", "web"],
-  estudando: "ADS na FIAP",
-  objetivo: "mostrar projetos reais"
-};</code></pre>
-        </div>
+          <a class="home-folder folder-amarelo" href="assets/pages/ads.html">
+            <span class="pasta-home">
+              <span class="home-miolo">
+                <span class="papel papel-um">fiap</span>
+                <span class="papel papel-dois">ads</span>
+                <span class="papel papel-tres">bd</span>
+              </span>
+              <span class="home-frente"></span>
+            </span>
+            <strong>ADS</strong>
+          </a>
 
-        <div class="codigo-texto">
-          <p class="rabisco detalhe">codigo</p>
-          <h2>Projetos de programacao.</h2>
-          <p>
-            Quando um card for de codigo, ele traz a pessoa para esta area. Aqui voce pode colocar landing pages,
-            interfaces, jogos simples e trabalhos feitos durante ADS.
-          </p>
-          <div class="mini-links">
-            <a href="#projetos">voltar para projetos</a>
-            <a href="#contato">falar comigo</a>
-          </div>
+          <a class="home-folder folder-azul" href="assets/pages/codigo.html">
+            <span class="pasta-home">
+              <span class="home-miolo">
+                <span class="papel papel-um">html</span>
+                <span class="papel papel-dois">css</span>
+                <span class="papel papel-tres">js</span>
+              </span>
+              <span class="home-frente"></span>
+            </span>
+            <strong>Codigo</strong>
+          </a>
         </div>
       </section>
 
@@ -174,16 +161,6 @@
       </section>
     </main>
 
-    <div class="modal" id="modal" aria-hidden="true">
-      <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
-        <button class="fechar" id="fecharModal" type="button" aria-label="Fechar">x</button>
-        <span id="modalCategoria"></span>
-        <h2 id="modalTitulo"></h2>
-        <p id="modalTexto"></p>
-        <a id="modalLink" href="#" target="_blank" rel="noreferrer">abrir projeto</a>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
