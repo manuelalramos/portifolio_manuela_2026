@@ -21,6 +21,7 @@
 
 .pronuncia {
   color: rgba(9, 45, 76, 0.3);
+  font-family: var(--fonte-terciaria);
 }
 
 .bio {
@@ -57,15 +58,19 @@
   transform: rotate(-6deg);
 }
 
+.selos span:hover{
+  transition: 0.4s ease;
+  scale: 1.03;
+  color: var(--off-white);
+  background-color: var(--azul);
+  transform: rotate(4deg);
+
+}
+
 .selos span:nth-child(2) {
   color: var(--coral);
   transform: rotate(4deg);
   transition: 0.4s ease;
-}
-
-.selos span:nth-child(4) {
-  color: #6d8f2c;
-  transform: rotate(-2deg);
 }
 
 .selos span:nth-child(2):hover{
@@ -74,6 +79,20 @@
   color: var(--off-white);
   background-color: var(--coral);
   transform: rotate(-2deg);
+
+}
+
+.selos span:nth-child(4) {
+  color: #6d8f2c;
+  transform: rotate(-2deg);
+}
+
+.selos span:nth-child(4):hover{
+  transition: 0.4s ease;
+  scale: 1.03;
+  color: var(--off-white);
+  background-color: var(--verde);
+  transform: rotate(4deg);
 
 }
 
@@ -130,14 +149,7 @@
   }
 }
 
-.license-wrap {
-  display: grid;
-  place-items: center;
-  padding: 54px 28px;
-  border-radius: 8px;
-  background: #050505;
-  box-shadow: var(--sombra);
-}
+
 
 .license-image-card {
   position: relative;
@@ -145,7 +157,7 @@
   min-height: 430px;
   display: grid;
   place-items: center;
-  transform: rotate(-4deg);
+  transform: rotate(4deg);
 }
 
 .license-image-card img {
@@ -155,6 +167,13 @@
   max-height: 620px;
   object-fit: contain;
   filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.38));
+  transition: 0.3s;
+}
+
+.license-image-card img:hover{
+  transition: 0.3s;
+  transform: rotate(-2deg);
+  scale: 1.3;
 }
 
 .license-placeholder {

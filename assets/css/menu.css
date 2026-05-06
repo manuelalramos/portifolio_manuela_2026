@@ -21,7 +21,7 @@
 .logo-link img {
   display: block;
   width: clamp(120px, 14vw, 190px);
-  filter: invert(22%) sepia(56%) saturate(857%) hue-rotate(168deg) brightness(91%);
+  filter: invert(22%) sepia(56%) saturate(857%) hue-rotate(168deg) brightness(50%);
 }
 
 .menu {
