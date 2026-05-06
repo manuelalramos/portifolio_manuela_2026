@@ -1,166 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manuela | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <div class="fundo-papel"></div>
-    <div class="cursor" id="cursor"></div>
 
-    <div class="entrada" id="entrada">
-      <img src="LOGO.svg" alt="Manuela" />
-      <span>abrindo portfolio</span>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <header class="topo" id="topo">
-      <a class="logo-link" href="index.html#inicio" aria-label="Voltar ao inicio">
-        <img src="LOGO.svg" alt="Manuela Digital Design & Web Development" />
-      </a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
-      <nav class="menu" aria-label="Menu principal">
-        <a href="index.html#inicio">home</a>
-        <a href="index.html#sobre">about</a>
-        <div class="menu-dropdown">
-          <a href="assets/pages/projetos.html">projetos</a>
-          <div class="submenu">
-            <a href="assets/pages/instagram.html">instagram</a>
-            <a href="assets/pages/ux.html">ui/ux</a>
-            <a href="assets/pages/ads.html">ads</a>
-            <a href="assets/pages/codigo.html">codigo</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+  <title>Manuela | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="fundo-papel"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <div class="entrada" id="entrada">
+    <img src="LOGO.svg" alt="Manuela" />
+    <span>abrindo portfolio</span>
+  </div>
+
+  <header class="topo" id="topo">
+    <a class="logo-link" href="index.html#inicio" aria-label="Voltar ao inicio">
+      <img src="LOGO.svg" alt="Manuela Digital Design & Web Development" />
+    </a>
+
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html#inicio">home</a>
+      <a href="index.html#sobre">about</a>
+      <div class="menu-dropdown">
+        <a href="assets/pages/projetos.html">projetos</a>
+        <div class="submenu">
+          <a href="assets/pages/instagram.html">instagram</a>
+          <a href="assets/pages/ux.html">ui/ux</a>
+          <a href="assets/pages/ads.html">ads</a>
+          <a href="assets/pages/codigo.html">codigo</a>
+        </div>
+      </div>
+      <a href="index.html#contato">contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-boas-vindas">
+        <p class="rabisco detalhe">welcome to my portfolio</p>
+        <h1>HEY THERE!</h1>
+        <p class="assinatura-hero">scroll to meet me</p>
+      </div>
+
+      <a class="botao-scroll" href="#sobre">descer</a>
+    </section>
+
+    <section class="sobre secao" id="sobre">
+      <div class="sobre-texto">
+        <p class="rabisco detalhe">about me</p>
+        <h1>Hi, my name is <strong> Manuela</strong></h1>
+        <p class="pronuncia rabisco">digital designer + web development student</p>
+
+        <div class="selos">
+          <span>FIAP ADS</span>
+          <span>social media</span>
+          <span>front-end</span>
+        </div>
+
+        <p class="bio">
+          Sou estudante de Analise e Desenvolvimento de Sistemas na FIAP e estou construindo um portfolio que junta o
+          meu lado visual com o meu lado tecnico. Aqui entram posts de Instagram, campanhas, banners, estudos de UX,
+          projetos da faculdade e experimentos com HTML, CSS e JavaScript.
+        </p>
+
+        <a class="botao-cv" href="CV-Manuela.pdf" download>baixar CV</a>
+      </div>
+
+      <div class="license-wrap" aria-label="Creative license visual">
+        <div class="license-image-card">
+          <img src="creative-license.png" alt="Carteira creative license da Manuela"
+            onload="this.nextElementSibling.style.display='none'"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+          <div class="license-placeholder">
+            <span class="rabisco">creative license</span>
+            <strong>coloque sua imagem aqui</strong>
+            <p>Salve a arte na pasta com o nome <b>creative-license.png</b>.</p>
           </div>
         </div>
-        <a href="index.html#contato">contato</a>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="hero-boas-vindas">
-          <p class="rabisco detalhe">welcome to my portfolio</p>
-          <h1>HEY THERE!</h1>
-          <p class="assinatura-hero">scroll to meet me</p>
-        </div>
+    <section class="faixa-palavras">
+      <div>
+        <span>design digital</span>
+        <span>web development</span>
+        <span>marketing</span>
+        <span>ux design</span>
+      </div>
+    </section>
 
-        <a class="botao-scroll" href="#sobre">descer</a>
-      </section>
+    <section class="home-projetos secao" id="home-projetos">
+      <p class="rabisco detalhe">tucked inside my folders</p>
+      <h2>Escolha uma pasta.</h2>
 
-      <section class="sobre secao" id="sobre">
-        <div class="sobre-texto">
-          <p class="rabisco detalhe">about me</p>
-          <h1>Hi, my name is Manuela.</h1>
-          <p class="pronuncia rabisco">digital designer + web development student</p>
-
-          <div class="selos">
-            <span>FIAP ADS</span>
-            <span>social media</span>
-            <span>front-end</span>
-          </div>
-
-          <p class="bio">
-            Sou estudante de Analise e Desenvolvimento de Sistemas na FIAP e estou construindo um portfolio que junta o
-            meu lado visual com o meu lado tecnico. Aqui entram posts de Instagram, campanhas, banners, estudos de UX,
-            projetos da faculdade e experimentos com HTML, CSS e JavaScript.
-          </p>
-
-          <a class="botao-cv" href="CV-Manuela.pdf" download>baixar CV</a>
-        </div>
-
-        <div class="license-wrap" aria-label="Creative license visual">
-          <div class="license-image-card">
-            <img
-              src="creative-license.png"
-              alt="Carteira creative license da Manuela"
-              onload="this.nextElementSibling.style.display='none'"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'"
-            />
-            <div class="license-placeholder">
-              <span class="rabisco">creative license</span>
-              <strong>coloque sua imagem aqui</strong>
-              <p>Salve a arte na pasta com o nome <b>creative-license.png</b>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="faixa-palavras">
-        <div>
-          <span>design digital</span>
-          <span>web development</span>
-          <span>marketing</span>
-          <span>ux design</span>
-        </div>
-      </section>
-
-      <section class="home-projetos secao" id="home-projetos">
-        <p class="rabisco detalhe">tucked inside my folders</p>
-        <h2>Escolha uma pasta.</h2>
-
-        <div class="home-pastas" aria-label="Pastas de projetos">
-          <a class="home-folder folder-rosa" href="assets/pages/instagram.html">
-            <span class="pasta-home">
-              <span class="home-miolo">
-                <span class="papel papel-um">post</span>
-                <span class="papel papel-dois">feed</span>
-                <span class="papel papel-tres">ads</span>
-              </span>
-              <span class="home-frente"></span>
+      <div class="home-pastas" aria-label="Pastas de projetos">
+        <a class="home-folder folder-rosa" href="assets/pages/instagram.html">
+          <span class="pasta-home">
+            <span class="home-miolo">
+              <span class="papel papel-um">post</span>
+              <span class="papel papel-dois">feed</span>
+              <span class="papel papel-tres">ads</span>
             </span>
-            <strong>Instagram</strong>
-          </a>
+            <span class="home-frente"></span>
+          </span>
+          <strong>Instagram</strong>
+        </a>
 
-          <a class="home-folder folder-verde" href="assets/pages/ux.html">
-            <span class="pasta-home">
-              <span class="home-miolo">
-                <span class="papel papel-um">figma</span>
-                <span class="papel papel-dois">wire</span>
-                <span class="papel papel-tres">ux</span>
-              </span>
-              <span class="home-frente"></span>
+        <a class="home-folder folder-verde" href="assets/pages/ux.html">
+          <span class="pasta-home">
+            <span class="home-miolo">
+              <span class="papel papel-um">figma</span>
+              <span class="papel papel-dois">wire</span>
+              <span class="papel papel-tres">ux</span>
             </span>
-            <strong>UI/UX</strong>
-          </a>
+            <span class="home-frente"></span>
+          </span>
+          <strong>UI/UX</strong>
+        </a>
 
-          <a class="home-folder folder-amarelo" href="assets/pages/ads.html">
-            <span class="pasta-home">
-              <span class="home-miolo">
-                <span class="papel papel-um">fiap</span>
-                <span class="papel papel-dois">ads</span>
-                <span class="papel papel-tres">bd</span>
-              </span>
-              <span class="home-frente"></span>
+        <a class="home-folder folder-amarelo" href="assets/pages/ads.html">
+          <span class="pasta-home">
+            <span class="home-miolo">
+              <span class="papel papel-um">fiap</span>
+              <span class="papel papel-dois">ads</span>
+              <span class="papel papel-tres">bd</span>
             </span>
-            <strong>ADS</strong>
-          </a>
+            <span class="home-frente"></span>
+          </span>
+          <strong>ADS</strong>
+        </a>
 
-          <a class="home-folder folder-azul" href="assets/pages/codigo.html">
-            <span class="pasta-home">
-              <span class="home-miolo">
-                <span class="papel papel-um">html</span>
-                <span class="papel papel-dois">css</span>
-                <span class="papel papel-tres">js</span>
-              </span>
-              <span class="home-frente"></span>
+        <a class="home-folder folder-azul" href="assets/pages/codigo.html">
+          <span class="pasta-home">
+            <span class="home-miolo">
+              <span class="papel papel-um">html</span>
+              <span class="papel papel-dois">css</span>
+              <span class="papel papel-tres">js</span>
             </span>
-            <strong>Codigo</strong>
-          </a>
-        </div>
-      </section>
+            <span class="home-frente"></span>
+          </span>
+          <strong>Codigo</strong>
+        </a>
+      </div>
+    </section>
 
-      <section class="contato secao" id="contato">
-        <p class="rabisco detalhe">vamos conversar?</p>
-        <h2>Portfolio artistico, interativo e pronto para receber suas artes reais.</h2>
-        <div class="links">
-          <a href="mailto:seuemail@exemplo.com">email</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin</a>
-          <a href="https://www.behance.net/" target="_blank" rel="noreferrer">behance</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
-        </div>
-      </section>
-    </main>
+    <section class="contato secao" id="contato">
+      <p class="rabisco detalhe">vamos conversar?</p>
+      <h2>Portfolio artistico, interativo e pronto para receber suas artes reais.</h2>
+      <div class="links">
+        <a href="mailto:seuemail@exemplo.com">email</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin</a>
+        <a href="https://www.behance.net/" target="_blank" rel="noreferrer">behance</a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
+      </div>
+    </section>
+  </main>
 
-    <script src="assets/js/script.js"></script>
-  </body>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
