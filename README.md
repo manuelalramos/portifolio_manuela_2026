@@ -1,8 +1,3 @@
-<!-- SWITCH -->
-
-<p align="center">
-  <strong>🇧🇷 PT</strong> • <a href="./README.en.md">EN</a>
-</p>
 
 <!-- HERO -->
 
