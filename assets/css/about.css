@@ -167,11 +167,11 @@
   max-height: 620px;
   object-fit: contain;
   filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.38));
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .license-image-card img:hover{
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   transform: rotate(-2deg);
   scale: 1.3;
 }

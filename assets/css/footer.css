@@ -1,0 +1,56 @@
+footer {
+  min-height: 95px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  color: var(--off-white);
+  background: var(--azul);
+  font-family: var(--fonte-terciaria);
+  font-size: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .direitos {
+  justify-self: start;
+  margin: 0 2rem;
+}
+
+footer .email {
+  justify-self: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: 0.5s;
+}
+
+footer .email:hover {
+  text-decoration: none;
+  scale: 1.02;
+  transform: rotate(-2deg);
+  transition: 0.5s;
+}
+
+footer .ano {
+  justify-self: end;
+  margin: 0 2rem;
+}
+
+@media (max-width: 760px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  footer .direitos,
+  footer .email,
+  footer .ano {
+    justify-self: center;
+  }
+}

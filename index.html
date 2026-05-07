@@ -23,7 +23,7 @@
 
   <title>Manuela | Portfolio</title>
   <link rel="stylesheet" href="./assets/css/main.css" />
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js" defer></script>
 
 </head>
 
@@ -33,7 +33,7 @@
 
   <div class="entrada" id="entrada">
     <img src="LOGO.svg" alt="Manuela" />
-    <span>abrindo portfolio...</span>
+    <span>abrindo portfolio</span>
   </div>
 
   <header class="topo" id="topo">
@@ -171,12 +171,17 @@
 
     <section class="contato secao" id="contato">
       <p class="rabisco detalhe">vamos conversar?</p>
-      <h2>Portfolio artistico, interativo e pronto para receber suas artes reais.</h2>
+      <h2>Entre em contato comigo para projetos, parcerias ou oportunidades criativas.</h2>
       <div class="links">
-        <a href="mailto:seuemail@exemplo.com">email</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin</a>
-        <a href="https://www.behance.net/" target="_blank" rel="noreferrer">behance</a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
+        <a href="mailto:seuemail@exemplo.com" aria-label="Enviar email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Abrir GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
     </section>
   </main>
