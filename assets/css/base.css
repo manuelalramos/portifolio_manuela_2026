@@ -18,18 +18,24 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   font-size: 62.5%;/* 10px = 1rem */ 
+  scrollbar-width: none;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  overscroll-behavior: none;
   color: #102233;
   background: var(--off-white);
   font-family: var(--fonte-primaria)
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 a {
@@ -109,6 +115,48 @@ button {
   padding: clamp(78px, 11vw, 150px) clamp(22px, 6vw, 92px);
 }
 
+.passagem-scroll {
+  will-change: opacity, transform;
+  transition: opacity 0.16s linear, transform 0.16s ease-out;
+}
+
+.barra-scroll {
+  position: fixed;
+  top: 34px;
+  right: 16px;
+  bottom: 34px;
+  z-index: 80;
+  width: 10px;
+  border-radius: 999px;
+  background: rgba(220, 236, 244, 0.8);
+  box-shadow: 0 8px 24px rgba(9, 45, 76, 0.12);
+}
+
+.barra-scroll-sumida {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.barra-scroll-botao {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  width: 6px;
+  border-radius: 999px;
+  background: var(--azul-escuro);
+  cursor: grab;
+  transition: background 0.2s ease;
+  will-change: transform, height;
+}
+
+.barra-scroll-botao:active {
+  cursor: grabbing;
+}
+
+.barra-scroll-botao:hover {
+  background: var(--azul);
+}
+
 @keyframes pontosEntrada {
   0% {
     content: "";
@@ -143,5 +191,17 @@ button {
 @media (max-width: 640px) {
   .cursor {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .passagem-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

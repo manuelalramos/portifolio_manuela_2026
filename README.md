@@ -1,92 +1,115 @@
-# Portfolio da Manuela
+# Manuela Portfolio
 
-Este projeto e uma landing page artistica em HTML, CSS e JavaScript com visual de portfolio editorial/collage.
+Portfolio autoral em desenvolvimento, construído para reunir design digital, desenvolvimento web e projetos visuais em uma experiência mais editorial, interativa e pessoal.
 
-## Arquivos
+Este repositório acompanha a construção do site, então a interface, as animações e a organização do conteúdo continuam evoluindo. Neste momento, o foco principal do projeto está em alimentar e refinar a página de projetos com trabalhos reais.
 
-- `index.html`: conteudo da pagina, secoes, menu e textos.
-- `assets/pages/projetos.html`: indice das categorias de projeto.
-- `assets/pages/instagram.html`: pagina dos projetos de Instagram.
-- `assets/pages/ux.html`: pagina dos projetos de UI/UX.
-- `assets/pages/ads.html`: pagina dos projetos de ADS.
-- `assets/pages/codigo.html`: pagina dos projetos de Codigo.
-- `assets/css/base.css`: estilos globais, entrada e variaveis.
-- `assets/css/menu.css`: navbar e dropdown de projetos.
-- `assets/css/hero.css`: primeira dobra do site, o hero.
-- `assets/css/about.css`: secao About, faixa de palavras e creative license.
-- `assets/css/files.css`: pastas de projetos.
-- `assets/css/projetos.css`: pagina indice de projetos.
-- `assets/css/instagram.css`: pagina de projetos de Instagram.
-- `assets/css/ux.css`: pagina de projetos de UI/UX.
-- `assets/css/ads.css`: pagina de projetos de ADS.
-- `assets/css/codigo.css`: pagina de projetos de Codigo.
-- `assets/css/contact.css`: secao de contato.
-- `assets/js/script.js`: luz do mouse, entrada animada e navbar com fundo ao rolar.
-- `LOGO.svg`: sua logo.
+## Status
 
-## Onde editar os projetos
+`Em desenvolvimento`
 
-Os atalhos em formato de pasta ficam na Home, dentro de `index.html`, na secao:
+O projeto já conta com:
+
+- Home com hero de entrada, navegação e atalhos visuais para as categorias.
+- Seção About com apresentação pessoal.
+- Página índice de projetos.
+- Páginas separadas para `Social Media`, `UI/UX`, `Projetos` e `Código`.
+- Estrutura CSS separada por área para facilitar manutenção e evolução.
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome
+- Google Fonts
+
+## Estrutura do projeto
 
 ```txt
-home-projetos
+PORTIFOLIO/
+├── index.html
+├── LOGO.svg
+├── README.md
+├── assets/
+│   ├── css/
+│   ├── cv/
+│   ├── js/
+│   └── pages/
+└── projetos/
+    ├── ads/
+    ├── codigo/
+    ├── instagram/
+    └── ux/
 ```
 
-A pagina indice fica em `assets/pages/projetos.html`.
+## Como executar localmente
 
-Cada tipo de projeto tem uma pagina propria:
+1. Clone o repositório:
 
-- `assets/pages/instagram.html`: galeria de posts.
-- `assets/pages/ux.html`: projeto visual no estilo de case.
-- `assets/pages/ads.html`: trabalhos da faculdade.
-- `assets/pages/codigo.html`: projetos de programacao.
-
-O menu do topo tambem tem um dropdown em `projetos`, com link direto para cada uma dessas paginas.
-
-Cada pagina usa esta ideia:
-
-- lado esquerdo: texto do projeto.
-- lado direito: imagens que aparecem durante o scroll.
-- para trocar imagem, coloque o arquivo na pasta certa ou mude o `src` da imagem no HTML.
-
-## Pastas de imagens
-
-A pagina de projetos ja procura imagens nestas pastas:
-
-```txt
-projetos/instagram/image.png
-projetos/instagram/post-01.png
-projetos/instagram/post-02.png
-projetos/instagram/post-03.png
-projetos/instagram/banner-01.png
-
-projetos/ux/image.png
-projetos/ux/desktop.png
-projetos/ux/mobile.png
-projetos/ux/processo.png
-
-projetos/ads/image.png
-projetos/ads/logica.png
-projetos/ads/documentacao.png
-
-projetos/codigo/image.png
-projetos/codigo/game.png
+```bash
+git clone <URL_DO_REPOSITORIO>
 ```
 
-Se a imagem ainda nao existir, o site continua funcionando com o visual de pasta e placeholder.
+2. Entre na pasta do projeto:
 
-## About e creative license
-
-O About agora espera uma imagem pronta da carteira.
-
-Salve sua arte na pasta com este nome:
-
-```txt
-creative-license.png
+```bash
+cd PORTIFOLIO
 ```
 
-Quando esse arquivo existir, o site mostra a imagem automaticamente. Se ele ainda nao existir, aparece um placeholder dizendo onde colocar.
+3. Abra o arquivo `index.html` no navegador.
 
-## CV
+Se preferir uma visualização melhor durante o desenvolvimento, você também pode rodar com uma extensão como `Live Server` no VS Code.
 
-O botao de CV aponta para `CV-Manuela.pdf`. Coloque seu PDF com esse nome na pasta para o download funcionar.
+## Páginas atuais
+
+- `index.html`: página principal do portfolio.
+- `assets/pages/projetos.html`: página índice das categorias.
+- `assets/pages/instagram.html`: projetos de social media.
+- `assets/pages/ux.html`: projetos de UI/UX.
+- `assets/pages/ads.html`: projetos acadêmicos e gerais.
+- `assets/pages/codigo.html`: projetos de desenvolvimento web.
+
+## Organização dos estilos
+
+Os estilos foram separados para deixar o projeto mais fácil de manter:
+
+- `assets/css/base.css`: base global, variáveis e comportamento compartilhado.
+- `assets/css/menu.css`: navegação principal.
+- `assets/css/hero.css`: primeira dobra da home.
+- `assets/css/about.css`: seção About.
+- `assets/css/files.css`: bloco de pastas/categorias.
+- `assets/css/contact.css`: seção de contato.
+- `assets/css/footer.css`: rodapé.
+- `assets/css/projetos.css`: página índice de projetos.
+- `assets/css/instagram.css`: página de social media.
+- `assets/css/ux.css`: página de UI/UX.
+- `assets/css/ads.css`: página de projetos acadêmicos.
+- `assets/css/codigo.css`: página de código.
+
+## Conteúdo e personalização
+
+O projeto foi pensado para receber materiais reais aos poucos. As imagens e conteúdos podem ser atualizados nas pastas e páginas já existentes.
+
+Arquivos esperados hoje:
+
+- `assets/cv/Currículo Manuela Ramos.pdf`
+- `projetos/instagram/`
+- `projetos/ux/`
+- `projetos/ads/`
+- `projetos/codigo/`
+
+Caso algum arquivo visual ainda não exista, a estrutura da página continua funcionando com placeholders.
+
+## Próximos passos
+
+As próximas etapas do projeto são:
+
+- continuar refinando UX e UI;
+- alimentar a página de projetos com trabalhos reais;
+- substituir placeholders por imagens finais;
+- ajustar detalhes de interação, ritmo visual e apresentação dos cases.
+
+## Objetivo
+
+Mais do que servir como vitrine, este portfolio foi pensado como um projeto vivo: um espaço para reunir processo, identidade visual, experimentação e evolução profissional em design e desenvolvimento.
