@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificados | Manuela</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/certificados.css" />
+  </head>
+  <body>
+    <div class="fundo-papel"></div>
+    <div class="cursor" id="cursor"></div>
+
+    <header class="topo" id="topo">
+      <a class="logo-link" href="../../index.html#inicio" aria-label="Voltar ao inicio">
+        <img src="../../LOGO.svg" alt="Manuela Digital Design & Web Development" />
+      </a>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="../../index.html#inicio">home</a>
+        <a href="../../index.html#sobre">about</a>
+        <a href="certificados.html">certificados</a>
+        <div class="menu-dropdown">
+          <a href="projetos.html">projetos</a>
+          <div class="submenu">
+            <a href="instagram.html">instagram</a>
+            <a href="ux.html">ui/ux</a>
+            <a href="ads.html">ads</a>
+            <a href="codigo.html">codigo</a>
+          </div>
+        </div>
+        <a href="../../index.html#contato">contato</a>
+      </nav>
+    </header>
+
+    <main class="pagina-certificados">
+      <section class="certificados-abertura secao">
+        <p class="rabisco detalhe">learning archive</p>
+        <h1>Certificados</h1>
+        <p>Passe o mouse sobre um certificado para ver descricao, chave e link de acesso.</p>
+      </section>
+
+      <section class="certificados-grade secao" aria-label="Lista de certificados">
+        <article class="certificado-card" tabindex="0">
+          <div class="certificado-miniatura">
+            <img
+              src="../images/certificado_ux.png"
+              alt="Certificado UX Foundations"
+              onload="this.nextElementSibling.style.display='none'"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+            <div class="certificado-placeholder" aria-hidden="true"></div>
+          </div>
+          <div class="certificado-ficha">
+            <h2>UX Foundations</h2>
+            <p>Formacao introdutoria focada em experiencia do usuario, fluxo e organizacao de interfaces.</p>
+            <span>chave: UX-2026-001</span>
+            <a href="https://example.com" target="_blank" rel="noreferrer">acessar certificado</a>
+          </div>
+        </article>
+
+        <article class="certificado-card" tabindex="0">
+          <div class="certificado-miniatura">
+            <img
+              src="../images/certificado_Front_End.png"
+              alt="Certificado Front-end Essentials"
+              onload="this.nextElementSibling.style.display='none'"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+            <div class="certificado-placeholder" aria-hidden="true"></div>
+          </div>
+          <div class="certificado-ficha">
+            <h2>Front-end Essentials</h2>
+            <p>Certificacao voltada para HTML, CSS e JavaScript com foco em construcao de paginas responsivas.</p>
+            <span>chave: FE-2026-014</span>
+            <a href="https://example.com" target="_blank" rel="noreferrer">acessar certificado</a>
+          </div>
+        </article>
+
+        <article class="certificado-card" tabindex="0">
+          <div class="certificado-miniatura">
+            <img
+              src="../images/certificado_design_digital.png"
+              alt="Certificado Design Digital"
+              onload="this.nextElementSibling.style.display='none'"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+            <div class="certificado-placeholder" aria-hidden="true"></div>
+          </div>
+          <div class="certificado-ficha">
+            <h2>Design Digital</h2>
+            <p>Curso com foco em composicao visual, identidade e repertorio criativo para produtos digitais.</p>
+            <span>chave: DD-2026-021</span>
+            <a href="https://example.com" target="_blank" rel="noreferrer">acessar certificado</a>
+          </div>
+        </article>
+
+        <article class="certificado-card" tabindex="0">
+          <div class="certificado-miniatura">
+            <img
+              src="../images/certificado_ads.png"
+              alt="Certificado Systems Analysis"
+              onload="this.nextElementSibling.style.display='none'"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+            <div class="certificado-placeholder" aria-hidden="true"></div>
+          </div>
+          <div class="certificado-ficha">
+            <h2>Systems Analysis</h2>
+            <p>Certificado academico ligado a analise de sistemas, logica, modelagem e organizacao de projetos.</p>
+            <span>chave: ADS-2026-008</span>
+            <a href="https://example.com" target="_blank" rel="noreferrer">acessar certificado</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -2,6 +2,7 @@
   min-height: 80vh;
   display: grid;
   align-content: center;
+  scroll-margin-top: 100px;
 }
 
 .contato h2 {

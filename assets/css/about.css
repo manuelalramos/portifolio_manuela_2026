@@ -96,32 +96,47 @@
 
 }
 
-.botao-cv {
-  font-size: 1.5rem;
+.acoes-sobre {
   display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.botao-sobre {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 20px;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 22px;
   border: 1px solid var(--azul);
   border-radius: 999px;
-  margin-top: 26px;
   color: var(--azul);
   background: transparent;
+  font-size: 1.5rem;
   cursor: pointer;
-   transition: 0.3s;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.fa-download{
-  margin: 0.2%;
-
-}
-
-.botao-cv:hover {
+.botao-sobre:hover {
   color: var(--off-white);
   background: var(--azul);
-  transition: 0.3s;
-  transform: scale(1.02);
+  transform: translateY(-2px);
+}
+
+.botao-sobre-destaque {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.botao-sobre-destaque:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+}
+
+.fa-download {
+  margin-top: 1px;
 }
 
 .faixa-palavras {
@@ -222,8 +237,8 @@
 }
 
 @media (max-width: 640px) {
-  .sobre h1 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
+  .sobre h2 {
+    font-size: clamp(4.2rem, 16vw, 6rem);
   }
 
   .license-wrap {
@@ -237,5 +252,13 @@
 
   .license-image-card {
     transform: rotate(-2deg);
+  }
+
+  .acoes-sobre {
+    gap: 10px;
+  }
+
+  .botao-sobre {
+    width: 100%;
   }
 }

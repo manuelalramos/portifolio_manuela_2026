@@ -1,0 +1,231 @@
+.pagina-certificados {
+  min-height: 100vh;
+}
+
+.certificados-abertura {
+  min-height: 52vh;
+  display: grid;
+  align-content: end;
+  gap: 18px;
+  padding-top: 180px;
+}
+
+.certificados-abertura .detalhe {
+  margin-bottom: 0;
+  font-size: 2.6rem;
+  transform: rotate(-2deg);
+}
+
+.certificados-abertura h1 {
+  margin: 0;
+  color: var(--azul-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 14vw, 13rem);
+  line-height: 0.8;
+  font-weight: 400;
+}
+
+.certificados-abertura p:last-child {
+  max-width: 680px;
+  margin: 0;
+  color: var(--azul);
+  font-family: var(--fonte-segundaria);
+  font-size: clamp(1.7rem, 2vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.certificados-grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px 28px;
+  padding-top: 40px;
+  align-items: start;
+}
+
+.certificado-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(170px, auto) 0fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent;
+  transition: transform 0.28s ease, grid-template-rows 0.34s ease, box-shadow 0.28s ease;
+  box-shadow: none;
+}
+
+.certificado-card:nth-child(2n) {
+  transform: rotate(-1.5deg);
+}
+
+.certificado-card:nth-child(2n + 1) {
+  transform: rotate(1.5deg);
+}
+
+.certificado-card:hover,
+.certificado-card:focus-within,
+.certificado-card:focus-visible {
+  grid-template-rows: minmax(170px, auto) 1fr;
+  transform: translateY(-8px) rotate(0deg);
+  box-shadow: 0 28px 46px rgba(9, 45, 76, 0.14);
+}
+
+.certificado-miniatura {
+  position: relative;
+  min-height: 170px;
+  padding: 18px 18px 14px;
+  border: 0;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+}
+
+.certificado-miniatura::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  z-index: 6;
+  width: 84px;
+  height: 18px;
+  border-radius: 2px;
+  background: rgba(247, 234, 220, 0.82);
+  box-shadow: 0 4px 10px rgba(9, 45, 76, 0.08);
+  transform: translateX(-50%) rotate(-6deg);
+  pointer-events: none;
+}
+
+.certificado-miniatura img,
+.certificado-placeholder {
+  width: 100%;
+  min-height: 150px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.certificado-miniatura img {
+  display: block;
+  object-fit: cover;
+  transform: rotate(0deg);
+  border: 0;
+  box-shadow: none;
+  transition: transform 0.32s ease, filter 0.32s ease;
+}
+
+.certificado-card:hover .certificado-miniatura img,
+.certificado-card:focus-within .certificado-miniatura img,
+.certificado-card:focus-visible .certificado-miniatura img {
+  transform: scale(1.01);
+  filter: saturate(1.04);
+}
+
+.certificado-placeholder {
+  display: none;
+  background: rgba(9, 45, 76, 0.03);
+  border: 1px dashed rgba(9, 45, 76, 0.12);
+}
+
+.certificado-ficha {
+  display: grid;
+  gap: 12px;
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 18px;
+  border: 1px solid rgba(9, 45, 76, 0.1);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: #ffffff;
+  transition: opacity 0.24s ease, padding 0.24s ease;
+}
+
+.certificado-card:hover .certificado-ficha,
+.certificado-card:focus-within .certificado-ficha,
+.certificado-card:focus-visible .certificado-ficha {
+  opacity: 1;
+  padding: 20px 18px 18px;
+}
+
+.certificado-card:hover .certificado-miniatura,
+.certificado-card:focus-within .certificado-miniatura,
+.certificado-card:focus-visible .certificado-miniatura {
+  border: 1px solid rgba(9, 45, 76, 0.1);
+  border-bottom: 0;
+  background: #ffffff;
+}
+
+.certificado-ficha h2,
+.certificado-ficha p,
+.certificado-ficha span,
+.certificado-ficha a {
+  margin: 0;
+}
+
+.certificado-ficha h2 {
+  color: var(--azul-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.certificado-ficha p {
+  color: #22384c;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.certificado-ficha span {
+  width: fit-content;
+  padding: 7px 12px;
+  border: 1px dashed rgba(9, 45, 76, 0.28);
+  border-radius: 999px;
+  color: var(--azul-escuro);
+  font-family: var(--fonte-segundaria);
+  font-size: 1.45rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.certificado-ficha a {
+  width: fit-content;
+  color: var(--coral);
+  font-family: var(--fonte-segundaria);
+  font-size: 1.7rem;
+  font-weight: 700;
+  transition: transform 0.22s ease, color 0.22s ease;
+}
+
+.certificado-ficha a:hover {
+  text-decoration: underline;
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .certificados-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .certificados-abertura {
+    min-height: 44vh;
+    padding-top: 220px;
+  }
+
+  .certificados-abertura h1 {
+    font-size: clamp(4.6rem, 18vw, 7rem);
+  }
+
+  .certificados-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .certificado-card,
+  .certificado-card:nth-child(2n),
+  .certificado-card:nth-child(2n + 1) {
+    transform: none;
+  }
+
+  .certificado-miniatura::before {
+    width: 76px;
+  }
+}
