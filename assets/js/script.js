@@ -76,6 +76,160 @@ function prepararCopiaDeChave() {
   });
 }
 
+function prepararCaseInstagram() {
+  const cases = document.querySelectorAll("[data-instagram-case]");
+
+  cases.forEach(function (caseItem) {
+    const palco = caseItem.querySelector("[data-instagram-palco]");
+    const abrir = caseItem.querySelector("[data-instagram-open]");
+    const fechar = caseItem.querySelector("[data-instagram-close]");
+    const visaoProjeto = caseItem.querySelector("[data-instagram-view='projeto']");
+    const visaoFeed = caseItem.querySelector("[data-instagram-view='feed']");
+    const paginaInstagram = caseItem.closest(".pagina-instagram");
+
+    if (!palco || !abrir || !fechar || !visaoProjeto || !visaoFeed) {
+      return;
+    }
+
+    abrir.addEventListener("click", function () {
+      palco.classList.add("feed-aberto");
+      visaoProjeto.setAttribute("aria-hidden", "true");
+      visaoFeed.setAttribute("aria-hidden", "false");
+    });
+
+    fechar.addEventListener("click", function () {
+      palco.classList.remove("feed-aberto");
+      visaoProjeto.setAttribute("aria-hidden", "false");
+      visaoFeed.setAttribute("aria-hidden", "true");
+
+      if (paginaInstagram) {
+        paginaInstagram.classList.remove("carrossel-ativo");
+      }
+    });
+  });
+}
+
+function prepararFocoCarrossel() {
+  const postsCarrossel = document.querySelectorAll("[data-carrossel]");
+
+  postsCarrossel.forEach(function (post) {
+    const paginaInstagram = post.closest(".pagina-instagram");
+    const preview = post.querySelector(".insta-carrossel-preview");
+    const totalSlides = preview ? preview.querySelectorAll(".insta-slide").length : 0;
+    let dentroDoPost = false;
+    let dentroDoPreview = false;
+
+    if (!paginaInstagram || !preview) {
+      return;
+    }
+
+    function configurarPreview() {
+      const card = post.getBoundingClientRect();
+      const larguraTela = window.innerWidth;
+      const margem = 24;
+      const gap = 16;
+      const larguraBase = larguraTela > 980 ? 180 : larguraTela > 760 ? 160 : 140;
+      const alturaBase = larguraBase * 1.25;
+      const espacoDireita = larguraTela - card.right - margem;
+      const espacoEsquerda = card.left - margem;
+      const alturaDisponivel = window.innerHeight - card.top - margem;
+
+      post.classList.remove("preview-direita", "preview-esquerda", "preview-abaixo");
+
+      if (larguraTela <= 640) {
+        post.classList.add("preview-abaixo");
+        post.style.setProperty("--preview-colunas", "1");
+        post.style.setProperty("--preview-largura", "250px");
+        return;
+      }
+
+      if (espacoDireita >= larguraBase * 2 + gap) {
+        const colunas = Math.min(3, Math.max(2, Math.floor((espacoDireita + gap) / (larguraBase + gap))));
+        post.classList.add("preview-direita");
+        post.style.setProperty("--preview-colunas", String(colunas));
+        post.style.setProperty("--preview-largura", String(colunas * larguraBase + (colunas - 1) * gap) + "px");
+        return;
+      }
+
+      if (espacoEsquerda >= larguraBase * 2 + gap) {
+        const colunas = Math.min(3, Math.max(2, Math.floor((espacoEsquerda + gap) / (larguraBase + gap))));
+        post.classList.add("preview-esquerda");
+        post.style.setProperty("--preview-colunas", String(colunas));
+        post.style.setProperty("--preview-largura", String(colunas * larguraBase + (colunas - 1) * gap) + "px");
+        return;
+      }
+
+      const colunas = larguraTela > 760 ? 2 : 1;
+      const linhas = Math.ceil(totalSlides / colunas);
+      const largura = colunas * larguraBase + (colunas - 1) * gap;
+      const altura = linhas * alturaBase + (linhas - 1) * gap;
+
+      post.classList.add("preview-abaixo");
+      post.style.setProperty("--preview-colunas", String(colunas));
+      post.style.setProperty("--preview-largura", String(largura) + "px");
+
+      if (altura > alturaDisponivel && colunas === 2) {
+        post.style.setProperty("--preview-colunas", "1");
+        post.style.setProperty("--preview-largura", "250px");
+      }
+    }
+
+    function atualizarFoco() {
+      const estaAtivo = dentroDoPost || dentroDoPreview;
+      paginaInstagram.classList.toggle("carrossel-ativo", estaAtivo);
+      post.classList.toggle("carrossel-aberto", estaAtivo);
+      post.setAttribute("aria-expanded", estaAtivo ? "true" : "false");
+    }
+
+    post.addEventListener("mouseenter", function () {
+      configurarPreview();
+      dentroDoPost = true;
+      atualizarFoco();
+    });
+
+    post.addEventListener("mouseleave", function () {
+      dentroDoPost = false;
+      atualizarFoco();
+    });
+
+    post.addEventListener("focusin", function () {
+      dentroDoPost = true;
+      atualizarFoco();
+    });
+
+    post.addEventListener("focusout", function () {
+      dentroDoPost = false;
+      atualizarFoco();
+    });
+
+    if (preview) {
+      preview.addEventListener("mouseenter", function () {
+        dentroDoPreview = true;
+        atualizarFoco();
+      });
+
+      preview.addEventListener("mouseleave", function () {
+        dentroDoPreview = false;
+        atualizarFoco();
+      });
+    }
+
+    if (paginaInstagram) {
+      paginaInstagram.addEventListener("mouseleave", function () {
+        dentroDoPost = false;
+        dentroDoPreview = false;
+        atualizarFoco();
+      });
+    }
+
+    window.addEventListener("resize", function () {
+      if (dentroDoPost || dentroDoPreview) {
+        configurarPreview();
+      }
+    });
+  });
+}
+
 function moverCursor(evento) {
   if (cursor) {
     cursor.style.left = evento.clientX + "px";
@@ -403,4 +557,6 @@ if (entrada && barraScroll) {
 }
 prepararLinksSuaves();
 prepararCopiaDeChave();
+prepararCaseInstagram();
+prepararFocoCarrossel();
 pedirAtualizacaoVisual();

@@ -18,6 +18,14 @@
   font-family: var(--fonte-segundaria);
   font-size: 20rem;
   line-height: 0.82;
+  transition: 0.3s ease;
+}
+
+h1:hover{
+  transition: 0.3s ease;
+  transform: rotate(-4deg);
+  scale: 1.08;
+  cursor: default;
 }
 
 .assinatura-hero {
@@ -27,6 +35,7 @@
   font-size: 9rem;
   line-height: 0.8;
   transform: rotate(-3deg);
+  cursor: default;
 }
 
 .botao-scroll {
@@ -53,6 +62,7 @@
   color: var(--off-white);
   transition: 0.5s ease-in;
   scale: 1.1;
+  cursor: pointer;
 }
 
 .rabisco {
@@ -60,6 +70,16 @@
   color: var(--verde);
   font-size: 3rem;
   letter-spacing: 0.04em;
+}
+
+.detalhe{
+  transition: 0.2s ease-in-out;
+}
+.detalhe:hover{
+  transition: 0.2s ease-in-out;
+  color: var(--coral);
+  scale: 1.02;
+  cursor: default;
 }
 
 @media (max-width: 640px) {

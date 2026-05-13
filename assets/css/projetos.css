@@ -1,13 +1,16 @@
-.cases-abertura {
-  min-height: 78vh;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 36px;
-  align-items: end;
-  padding: 170px clamp(22px, 6vw, 92px) 76px;
+.pagina-projetos {
+  min-height: 100vh;
 }
 
-.cases-abertura h1 {
+.projetos-hero {
+  min-height: 72vh;
+  display: grid;
+  align-content: end;
+  gap: 20px;
+  padding-top: 170px;
+}
+
+.projetos-hero h1 {
   margin: 0;
   color: var(--azul-escuro);
   font-family: Georgia, "Times New Roman", serif;
@@ -16,55 +19,131 @@
   font-weight: 400;
 }
 
-.cases-abertura p:last-child {
-  max-width: 520px;
+.projetos-hero p:last-child {
+  max-width: 720px;
+  margin: 0;
   color: var(--azul);
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
-  font-size: clamp(1.15rem, 2.5vw, 2rem);
-  font-weight: 800;
+  font-family: var(--fonte-segundaria);
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  line-height: 1.35;
+}
+
+.projetos-adesivos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 90px;
+}
+
+.adesivo {
+  position: relative;
+  min-height: 220px;
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+  padding: 30px 30px 28px;
+  border-radius: 24px;
+  color: var(--azul-escuro);
+  box-shadow: 0 20px 42px rgba(9, 45, 76, 0.11);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.adesivo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.adesivo:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 28px 56px rgba(9, 45, 76, 0.18);
+}
+
+.adesivo strong,
+.adesivo small {
+  position: relative;
+  z-index: 2;
+}
+
+.adesivo strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.8rem, 5vw, 5.8rem);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.adesivo small {
+  max-width: 320px;
+  font-family: var(--fonte-segundaria);
+  font-size: 1.9rem;
   line-height: 1.25;
 }
 
-.cases-menu {
-  display: grid;
-  gap: 12px;
-  justify-items: end;
-  color: var(--azul-escuro);
-  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+.adesivo-dobra {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 92px;
+  height: 92px;
+  border-top-right-radius: 24px;
+  background: rgba(255, 255, 255, 0.42);
+  clip-path: polygon(24% 0, 100% 0, 100% 74%, 62% 60%);
+  box-shadow: inset 0 -8px 14px rgba(9, 45, 76, 0.08);
+  transform-origin: top right;
+  transition: transform 0.32s ease, background-color 0.32s ease;
 }
 
-.cases-menu a {
-  border-bottom: 2px solid transparent;
+.adesivo:hover .adesivo-dobra {
+  transform: rotate(-12deg) translate(-10px, 8px);
+  background: rgba(255, 255, 255, 0.65);
 }
 
-.cases-menu a:hover {
-  border-color: currentColor;
+.adesivo-rosa {
+  background: #f7c5d2;
+}
+
+.adesivo-verde {
+  background: #c9dfbe;
+}
+
+.adesivo-amarelo {
+  background: #f7dda2;
+}
+
+.adesivo-azul {
+  background: #bfdff0;
 }
 
 @media (max-width: 900px) {
-  .cases-abertura {
+  .projetos-adesivos {
     grid-template-columns: 1fr;
-  }
-
-  .cases-menu {
-    justify-items: start;
-    grid-template-columns: repeat(4, auto);
-    gap: 16px;
   }
 }
 
 @media (max-width: 640px) {
-  .cases-abertura {
-    min-height: 78vh;
-    padding: 220px 22px 70px;
+  .projetos-hero {
+    min-height: 62vh;
+    padding-top: 220px;
   }
 
-  .cases-abertura h1 {
-    font-size: clamp(4.4rem, 21vw, 6.6rem);
+  .projetos-hero h1 {
+    font-size: clamp(4.4rem, 18vw, 6.6rem);
   }
 
-  .cases-menu {
-    grid-template-columns: repeat(2, auto);
-    justify-items: start;
+  .adesivo {
+    min-height: 200px;
+    padding: 24px;
+  }
+
+  .adesivo strong {
+    font-size: clamp(3.2rem, 12vw, 4.4rem);
+  }
+
+  .adesivo small {
+    font-size: 1.7rem;
   }
 }

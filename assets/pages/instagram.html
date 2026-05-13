@@ -34,35 +34,140 @@
       </nav>
     </header>
 
-    <main class="pagina-cases">
-      <section class="case-scroll secao primeira-case">
-        <aside class="case-info">
-          <p class="rabisco detalhe">social media</p>
-          <h1>Instagram</h1>
-          <p>
-            Posts, carrosseis, banners e campanhas. O texto fica aqui do lado, e as imagens do projeto aparecem no
-            scroll.
-          </p>
-          <span>posts / banners / campanhas</span>
-        </aside>
+    <main class="pagina-instagram">
+      <div class="insta-foco-fundo" aria-hidden="true"></div>
 
-        <div class="case-imagens">
-          <figure>
-            <img src="../../projetos/instagram/post-01.png" alt="Post de Instagram 01" onerror="this.remove()" />
-            <figcaption>post 01</figcaption>
-          </figure>
-          <figure>
-            <img src="../../projetos/instagram/post-02.png" alt="Post de Instagram 02" onerror="this.remove()" />
-            <figcaption>post 02</figcaption>
-          </figure>
-          <figure>
-            <img src="../../projetos/instagram/post-03.png" alt="Post de Instagram 03" onerror="this.remove()" />
-            <figcaption>post 03</figcaption>
-          </figure>
-          <figure class="wide">
-            <img src="../../projetos/instagram/banner-01.png" alt="Banner de campanha" onerror="this.remove()" />
-            <figcaption>banner</figcaption>
-          </figure>
+      <section class="instagram-abertura secao">
+        <p class="rabisco detalhe">social media archive</p>
+        <h1>Instagram</h1>
+        <p>
+          Projetos para feed, campanhas e linguagem visual. Cada case pode abrir o feed
+          sem sair da pagina, e os carrosseis ganham um foco proprio quando voce passa o mouse.
+        </p>
+      </section>
+
+      <section class="insta-case secao" data-instagram-case>
+        <div class="instagram-palco" data-instagram-palco>
+          <div class="insta-visao insta-visao-projeto" data-instagram-view="projeto">
+            <div class="insta-texto">
+              <p class="rabisco detalhe">projeto 01</p>
+              <h2>Comuta Reformas</h2>
+              <span>social media / direcao visual / feed</span>
+              <p>
+                Aqui entra o contexto do projeto, objetivo da comunicacao, direcionamento
+                visual e o tipo de resultado esperado para o feed. A ideia e usar essa
+                primeira tela para apresentar o caso com calma antes de abrir os posts.
+              </p>
+              <button class="insta-botao" type="button" data-instagram-open>
+                ver feed
+              </button>
+            </div>
+
+            <div class="insta-cena-livre" aria-label="Imagem principal do projeto">
+              <img
+                src="../projects/social_media/mockup_comuta.png"
+                alt="Imagem principal do projeto de Instagram"
+                onload="this.nextElementSibling.style.display='none'"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+              <div class="insta-cena-placeholder">
+                <span>suba aqui a imagem principal do case</span>
+                <small>voce pode trocar por uma composicao pronta com celular, mockup ou colagem</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="insta-visao insta-visao-feed" data-instagram-view="feed" aria-hidden="true">
+            <div class="insta-feed-topo">
+              <button class="insta-botao insta-botao-secundario" type="button" data-instagram-close>
+                voltar
+              </button>
+              <p>Passe o mouse por cima de um post para ampliar. Nos carrosseis, o foco abre sozinho.</p>
+            </div>
+
+            <div class="insta-feed-grade" aria-label="Grade do feed">
+              <figure class="insta-post insta-post-carrossel" data-carrossel>
+                <span class="insta-carrossel-selo" aria-hidden="true"></span>
+                <img src="../projects/social_media/POST__1/post_1_1.jpg" alt="Post 01 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                <div class="post-placeholder"></div>
+                <div class="insta-carrossel-preview" aria-hidden="true">
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_2.jpg" alt="Slide 02 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_3.jpg" alt="Slide 03 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_4.jpg" alt="Slide 04 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_5.jpg" alt="Slide 05 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_6.jpg" alt="Slide 06 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_7.jpg" alt="Slide 07 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                  <div class="insta-slide">
+                    <img src="../projects/social_media/POST__1/post_1_8.jpg" alt="Slide 08 do carrossel" onload="this.nextElementSibling.style.display='none'" onerror="this.onerror=null; this.src='../projects/social_media/mockup_comuta.png'; this.nextElementSibling.style.display='none'" />
+                    <div class="post-placeholder"></div>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-02.png" alt="Post 02 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-03.png" alt="Post 03 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-04.png" alt="Post 04 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-05.png" alt="Post 05 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-06.png" alt="Post 06 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-07.png" alt="Post 07 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+
+              <figure class="insta-post">
+                <img src="../../projetos/instagram/feed-08.png" alt="Post 08 do feed" onload="this.nextElementSibling.style.display='none'" onerror="this.closest('figure').remove()" />
+                <div class="post-placeholder"></div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="insta-proximos secao">
+        <div>
+          <p class="rabisco detalhe">proximos projetos</p>
+          <h2>Mais cases entram aqui embaixo.</h2>
+          <p>
+            Esse espaco continua livre para receber outros projetos de Instagram
+            sem quebrar a fluidez da navegacao.
+          </p>
         </div>
       </section>
     </main>

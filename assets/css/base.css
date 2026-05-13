@@ -15,6 +15,7 @@
 
 * {
   box-sizing: border-box;
+  cursor: url('../images/cursor.svg'),auto;
 }
 
 html {
@@ -31,7 +32,8 @@ body {
   overscroll-behavior: none;
   color: #102233;
   background: var(--off-white);
-  font-family: var(--fonte-primaria)
+  font-family: var(--fonte-primaria);
+  
 }
 
 ::-webkit-scrollbar {
