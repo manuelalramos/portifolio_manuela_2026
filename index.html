@@ -21,190 +21,260 @@
 
   <script src="https://kit.fontawesome.com/c79d6fb851.js" crossorigin="anonymous"></script>
 
-  <title>Manuela | Portfolio</title>
+  <title>Manuela Ramos | Desenvolvimento Web e Sistemas</title>
   <link rel="stylesheet" href="./assets/css/main.css" />
   <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
   <div class="fundo-papel"></div>
-  <div class="cursor" id="cursor"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
   <div class="entrada" id="entrada">
-    <img src="LOGO.svg" alt="Manuela" />
+    <img src="./assets/media/logo_azul.png" alt="Manuela Ramos" />
     <span>abrindo portfolio</span>
   </div>
 
   <header class="topo" id="topo">
-    <a class="logo-link" href="index.html#inicio" aria-label="Voltar ao inicio">
-      <img src="LOGO.svg" alt="Manuela Digital Design & Web Development" />
+    <a class="logo-link" href="#inicio" aria-label="Voltar ao inicio">
+      <img src="./assets/media/logo_azul.png" alt="Manuela Ramos" />
     </a>
 
     <nav class="menu" aria-label="Menu principal">
-      <a href="index.html#inicio">home</a>
-      <a href="index.html#sobre">about</a>
-      <a href="assets/pages/certificados.html">certificados</a>
-      <div class="menu-dropdown">
-        <a href="assets/pages/projetos.html">projetos</a>
-        <div class="submenu">
-          <a href="assets/pages/instagram.html">social media</a>
-          <a href="assets/pages/ux.html">ui/ux</a>
-          <a href="assets/pages/ads.html">projetos</a>
-          <a href="assets/pages/codigo.html">codigo</a>
-        </div>
-      </div>
-      <a href="index.html#contato">contato</a>
+      <a href="#inicio">home</a>
+      <a href="#sobre">sobre</a>
+      <a href="#projetos">projetos live</a>
+      <a href="./pages/certificados.html">certificados</a>
+      <a href="#contato">contato</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero-boas-vindas">
-        <p class="rabisco detalhe">welcome to my portfolio</p>
-        <h1>HEY THERE!</h1>
-        <p class="assinatura-hero">scroll to meet me</p>
+      <div class="hero-glow hero-glow-um" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-dois" aria-hidden="true"></div>
+
+      <div class="hero-conteudo">
+        <p class="rabisco detalhe">desenvolvimento web e sistemas</p>
+        <h1>portfolio</h1>
+        <p class="hero-resumo">
+          Sites, landing pages, interfaces e aplicações web criadas com lógica,
+          organização, responsividade e experiência de usuário.
+        </p>
+
+        <ul class="hero-tags" aria-label="Tecnologias e foco">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+          <li>UX/UI</li>
+        </ul>
       </div>
 
-      <a class="botao-scroll" href="#sobre">descer</a>
+      <a class="botao-scroll" href="#sobre" aria-label="Ir para a secao sobre">
+        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      </a>
     </section>
 
     <section class="sobre secao" id="sobre">
       <div class="sobre-texto">
-        <p class="rabisco detalhe">about me</p>
-        <h2>Hi, my name is <strong>Manuela</strong></h2>
-        <p class="pronuncia rabisco">digital designer + web development student</p>
+        <p class="rabisco detalhe">sobre mim</p>
+        <h2>Oi, eu sou a <strong>Manuela</strong>.</h2>
+        <p class="pronuncia rabisco">desenvolvimento web, sistemas e produtos digitais</p>
 
-        <div class="selos">
-          <span>Multimidia</span>
-          <span>Analise e Desenvolvimento de Sistemas</span>
-          <span>Design Digital</span>
-          <span>Desenvolvimento Web</span>
-        </div>
+        <ul class="selos" aria-label="Áreas de atuação">
+          <li>ADS na FIAP</li>
+          <li>Desenvolvimento Web</li>
+          <li>JavaScript</li>
+          <li>SQL e lógica</li>
+          <li>UX/UI</li>
+        </ul>
 
         <p class="bio">
-          Sou estudante de <strong>Analise e Desenvolvimento de Sistemas</strong> na
-          <strong class="bio fiap">FIAP</strong>, com formacao em <strong>Multimidia</strong> e experiencia em
-          <strong>design, marketing digital e desenvolvimento front-end.</strong> Gosto de criar experiencias
-          digitais que unem tecnologia, criatividade e experiencia do usuario, conectando design e codigo em
-          projetos modernos e funcionais.
+          Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na
+          <strong class="fiap">FIAP</strong> e técnica em Multimídia pelo Senac. Atuo entre
+          desenvolvimento web, lógica de programação, manutenção de sites, UX/UI, e-commerce e comunicação digital.
+          Meu foco aqui é mostrar projetos que unem código, organização, interface e soluções digitais úteis.
         </p>
 
         <div class="acoes-sobre">
-          <a class="botao-sobre botao-sobre-destaque" href="./assets/cv/Currículo Manuela Ramos.pdf" download>
+          <a class="botao-sobre botao-sobre-destaque" href="./assets/media/Currículo Manuela Ramos 2026.pdf" download>
             baixar CV
-            <i class="fa-solid fa-download"></i>
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
           </a>
-          <a class="botao-sobre" href="assets/pages/certificados.html">ver certificados</a>
-          <a class="botao-sobre" href="#contato">entrar em contato</a>
+          <a class="botao-sobre" href="./pages/certificados.html">ver certificados</a>
+          <a class="botao-sobre" href="#projetos">ver projetos live</a>
         </div>
       </div>
 
-      <div class="license-wrap" aria-label="Creative license visual">
+      <figure class="license-wrap" aria-label="Creative license visual">
         <div class="license-image-card">
-          <img src="./assets/images/creative-license.png..png" alt="Carteira creative license da Manuela"
-            onload="this.nextElementSibling.style.display='none'"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'" />
+          <img src="./assets/media/creative-license.png..png" alt="Carteira creative license da Manuela" />
         </div>
-      </div>
+      </figure>
     </section>
 
-    <section class="faixa-palavras">
+    <section class="faixa-palavras" aria-label="Tecnologias">
       <div>
-        <span>design digital</span>
-        <span>web development</span>
-        <span>marketing</span>
-        <span>ux design</span>
-        <span>design digital</span>
-        <span>web development</span>
-        <span>marketing</span>
-        <span>ux design</span>
+        <span>front-end</span>
+        <span>javascript</span>
+        <span>sistemas</span>
+        <span>sql</span>
+        <span>responsivo</span>
+        <span>interfaces web</span>
+        <span>front-end</span>
+        <span>javascript</span>
+        <span>sistemas</span>
+        <span>sql</span>
+        <span>responsivo</span>
+        <span>interfaces web</span>
       </div>
     </section>
 
-    <section class="home-projetos secao" id="home-projetos">
-      <p class="rabisco detalhe files">tucked inside my folders</p>
-      <h2>Escolha uma pasta.</h2>
+    <section class="home-projetos secao" id="projetos">
+      <div class="secao-cabecalho">
+        <p class="rabisco detalhe">rodando agora</p>
+        <h2>Projetos live</h2>
+        <p>
+          Sites e interfaces publicados, com link para acessar o projeto e também para ver o código no GitHub.
+        </p>
+      </div>
 
-      <div class="home-pastas" aria-label="Pastas de projetos">
-        <a class="home-folder folder-rosa" href="assets/pages/instagram.html">
-          <span class="pasta-home">
-            <span class="home-miolo">
-              <span class="papel papel-um">post</span>
-              <span class="papel papel-dois">feed</span>
-              <span class="papel papel-tres">story</span>
+      <div class="projetos-live" aria-label="Projetos publicados">
+        <article class="projeto-card">
+          <a class="projeto-media projeto-media-portfolio" href="#inicio" aria-label="Abrir projeto Portfolio Manuela">
+            <span class="status-live">live</span>
+            <span class="janela-topo" aria-hidden="true">
+              <i></i><i></i><i></i>
             </span>
-            <span class="home-frente"></span>
-          </span>
-          <strong>Social Media</strong>
-        </a>
+            <span class="preview-linhas" aria-hidden="true"></span>
+          </a>
+          <div class="projeto-info">
+            <h3>Portfolio pessoal</h3>
+            <p>Landing pessoal em HTML, CSS e JavaScript, com foco em apresentação profissional, responsividade e identidade visual.</p>
+            <ul class="projeto-stack" aria-label="Tecnologias usadas">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+            <div class="projeto-links">
+              <a class="projeto-link" href="#inicio">
+                ver site
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+              <a class="projeto-link projeto-link-secundario" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">
+                GitHub
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
 
-        <a class="home-folder folder-verde" href="assets/pages/ux.html">
-          <span class="pasta-home">
-            <span class="home-miolo">
-              <span class="papel papel-um">figma</span>
-              <span class="papel papel-dois">wire</span>
-              <span class="papel papel-tres">ux</span>
+        <article class="projeto-card">
+          <a class="projeto-media projeto-media-site" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir GitHub da Manuela">
+            <span class="status-live">live</span>
+            <span class="janela-topo" aria-hidden="true">
+              <i></i><i></i><i></i>
             </span>
-            <span class="home-frente"></span>
-          </span>
-          <strong>UI/UX</strong>
-        </a>
+            <span class="preview-grid" aria-hidden="true"></span>
+          </a>
+          <div class="projeto-info">
+            <h3>Interfaces Web</h3>
+            <p>Espaço para publicar sites, páginas e experiências web com imagem, stack e chamada direta para o deploy.</p>
+            <ul class="projeto-stack" aria-label="Características do projeto">
+              <li>Layout</li>
+              <li>Mobile</li>
+              <li>Deploy</li>
+            </ul>
+            <div class="projeto-links">
+              <a class="projeto-link" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">
+                ver site
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+              <a class="projeto-link projeto-link-secundario" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">
+                GitHub
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
 
-        <a class="home-folder folder-amarelo" href="assets/pages/ads.html">
-          <span class="pasta-home">
-            <span class="home-miolo">
-              <span class="papel papel-um">fiap</span>
-              <span class="papel papel-dois">ads</span>
-              <span class="papel papel-tres">bd</span>
+        <article class="projeto-card">
+          <a class="projeto-media projeto-media-app" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir repositorios da Manuela">
+            <span class="status-live">live</span>
+            <span class="janela-topo" aria-hidden="true">
+              <i></i><i></i><i></i>
             </span>
-            <span class="home-frente"></span>
-          </span>
-          <strong>Projetos</strong>
-        </a>
-
-        <a class="home-folder folder-azul" href="assets/pages/codigo.html">
-          <span class="pasta-home">
-            <span class="home-miolo">
-              <span class="papel papel-um">html</span>
-              <span class="papel papel-dois">css</span>
-              <span class="papel papel-tres">js</span>
-            </span>
-            <span class="home-frente"></span>
-          </span>
-          <strong>Codigo</strong>
-        </a>
+            <span class="preview-app" aria-hidden="true"></span>
+          </a>
+          <div class="projeto-info">
+            <h3>Projetos JavaScript</h3>
+            <p>Área para experimentos interativos, pequenas aplicações e estudos práticos de lógica no navegador.</p>
+            <ul class="projeto-stack" aria-label="Tecnologias usadas">
+              <li>DOM</li>
+              <li>Lógica</li>
+              <li>API</li>
+            </ul>
+            <div class="projeto-links">
+              <a class="projeto-link" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">
+                ver site
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+              <a class="projeto-link projeto-link-secundario" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">
+                GitHub
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="contato secao" id="contato">
       <p class="rabisco detalhe">vamos conversar?</p>
-      <h2>Entre em contato comigo para projetos, parcerias ou oportunidades criativas.</h2>
-    
-      <div class="links">
-        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
-          <i class="fa-brands fa-whatsapp" style="color: rgb(9, 48, 76);"></i>
-        </a>
+      <h2>Faço projetos web e estou aberta a propostas, parcerias e oportunidades em tecnologia.</h2>
 
-        <a href="mailto:seuemail@exemplo.com" aria-label="Enviar email">
+      <address class="links" aria-label="Links de contato">
+        <a href="mailto:contato.manuelalramos@gmail.com" aria-label="Enviar email">
           <i class="fa-solid fa-envelope"></i>
         </a>
 
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn">
+        <a href="https://www.linkedin.com/in/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Abrir GitHub">
+        <a href="https://github.com/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        
-      </div>
+      </address>
     </section>
   </main>
 
-  <footer>
-    <p class="direitos">&copy; Todos os direitos reservados. Manuela de Lima Ramos.</p>
-    <p class="email">manuelalimaramos@hotmail.com</p>
-    <p class="ano">2026</p>
+  <footer class="footer-site">
+    <section class="footer-marca" aria-label="Resumo profissional">
+      <img src="./assets/media/logo_branca.png" alt="Manuela Ramos" onerror="this.onerror=null;this.src='./assets/media/logo_azul.png';this.classList.add('logo-fallback')" />
+      <p>Desenvolvimento web, sistemas e produtos digitais com atenção a código, interface e comunicação.</p>
+    </section>
+
+    <section class="footer-coluna" aria-labelledby="footer-projetos">
+      <h2 id="footer-projetos">Projetos</h2>
+      <p>Faço sites, landing pages, interfaces responsivas e melhorias para presença digital.</p>
+      <a class="footer-cta" href="#contato"><i class="fa-solid fa-briefcase"></i> Propor projeto</a>
+    </section>
+
+    <address class="footer-coluna" aria-labelledby="footer-contato">
+      <h2 id="footer-contato">Contato</h2>
+      <a href="mailto:contato.manuelalramos@gmail.com"> <i class="fa-solid fa-envelope"></i>contato.manuelalramos@gmail.com</a>
+      <nav class="footer-social" aria-label="Redes sociais">
+        <a href="https://www.linkedin.com/in/manuelalramos" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+        <a href="https://github.com/manuelalramos" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+      </nav>
+    </address>
+
+    <div class="footer-base">
+      <p>&copy; 2026 Manuela de Lima Ramos.</p>
+      <p>Aberta a propostas de projetos e oportunidades.</p>
+    </div>
   </footer>
 </body>
 
