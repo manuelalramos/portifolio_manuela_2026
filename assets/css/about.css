@@ -39,6 +39,10 @@
   color: var(--coral);
 }
 
+.senac{
+  color: #d68e28;;
+}
+
 .selos {
   display: flex;
   flex-wrap: wrap;
