@@ -30,7 +30,11 @@
         <img src="../assets/media/logo_azul.png" alt="Manuela Ramos" />
       </a>
 
-      <nav class="menu" aria-label="Menu principal">
+      <button class="menu-botao" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
         <a href="../index.html#inicio">home</a>
         <a href="../index.html#sobre">sobre</a>
         <a href="../index.html#projetos">projetos</a>
@@ -231,17 +235,17 @@
     <footer class="footer-site">
     <div class="footer-grid">
       <section class="footer-marca" aria-label="Resumo profissional">
-        <img src="./assets/media/logo_branca.png" alt="Manuela Ramos" onerror="this.onerror=null;this.src='../assets/media/logo_azul.png';this.classList.add('logo-fallback')" />
+        <img src="../assets/media/logo_branca.png" alt="Manuela Ramos" onerror="this.onerror=null;this.src='../assets/media/logo_azul.png';this.classList.add('logo-fallback')" />
         <p>Desenvolvimento web, sistemas e produtos digitais com atenção a código, interface e comunicação.</p>
       </section>
 
       <nav class="footer-coluna" aria-labelledby="footer-menu">
         <h2 id="footer-menu">Menu</h2>
-        <a href="#inicio">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#processo">Processo</a>
-        <a href="./pages/certificados.html">Certificados</a>
+        <a href="../index.html#inicio">Home</a>
+        <a href="../index.html#sobre">Sobre</a>
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="../index.html#processo">Processo</a>
+        <a href="certificados.html">Certificados</a>
       </nav>
 
       <address class="footer-coluna" aria-labelledby="footer-contato">
