@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://manuelalramos.github.io/PORTIFOLIO/">
+  <a href="https://manuelalramos.com.br">
     <img src="https://img.shields.io/badge/Acessar%20Portfolio-7c3aed?style=for-the-badge&logo=googlechrome&logoColor=white"/>
   </a>
 </p>
