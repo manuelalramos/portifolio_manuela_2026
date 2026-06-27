@@ -99,6 +99,34 @@ function prepararLinksSuaves() {
   });
 }
 
+function prepararVideosDeProjetos() {
+  const videos = document.querySelectorAll(".projeto-media video");
+
+  videos.forEach(function (video) {
+    const media = video.closest(".projeto-media");
+
+    if (!media) {
+      return;
+    }
+
+    function marcarCarregado() {
+      media.classList.add("video-carregado");
+    }
+
+    function marcarIndisponivel() {
+      media.classList.remove("video-carregado");
+    }
+
+    video.addEventListener("loadeddata", marcarCarregado);
+    video.addEventListener("canplay", marcarCarregado);
+    video.addEventListener("error", marcarIndisponivel);
+
+    if (video.readyState >= 2) {
+      marcarCarregado();
+    }
+  });
+}
+
 if (entrada) {
   document.documentElement.classList.add("entrada-ativa");
 
@@ -113,3 +141,4 @@ window.addEventListener("scroll", mudarTopo);
 mudarTopo();
 prepararLinksSuaves();
 prepararCopiaDeChave();
+prepararVideosDeProjetos();
