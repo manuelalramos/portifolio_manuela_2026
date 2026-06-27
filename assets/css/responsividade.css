@@ -162,6 +162,21 @@
     gap: 8px;
   }
 
+  .hero-icones {
+    width: min(330px, 86vw);
+    margin-bottom: 10px;
+  }
+
+  .hero-icones-trilho {
+    gap: 14px;
+  }
+
+  .hero-icones img {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
   .hero-tags li {
     min-height: 30px;
     padding-inline: 11px;

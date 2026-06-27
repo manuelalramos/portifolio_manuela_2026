@@ -285,11 +285,12 @@ function prepararScrollFlutuante() {
       return;
     }
 
-    const alturaTrilho = barra.clientHeight;
+    const margemThumb = 10;
+    const alturaTrilho = Math.max(0, barra.clientHeight - margemThumb * 2);
     const alturaThumb = Math.max(44, (alturaTela / alturaPagina) * alturaTrilho);
     const limiteScroll = alturaPagina - alturaTela;
     const limiteThumb = alturaTrilho - alturaThumb;
-    const posicaoThumb = limiteScroll > 0 ? (window.scrollY / limiteScroll) * limiteThumb : 0;
+    const posicaoThumb = margemThumb + (limiteScroll > 0 ? (window.scrollY / limiteScroll) * limiteThumb : 0);
 
     thumb.style.height = alturaThumb + "px";
     thumb.style.transform = "translateY(" + posicaoThumb + "px)";

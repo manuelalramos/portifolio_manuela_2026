@@ -59,6 +59,33 @@
   color: var(--azul);
 }
 
+.hero-icones {
+  width: min(560px, 86vw);
+  overflow: hidden;
+  margin: 0 0 clamp(10px, 1.6vw, 18px);
+  opacity: 0.82;
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.hero-icones-trilho {
+  margin-top: 3rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  animation: iconesHero 32s linear infinite;
+}
+
+.hero-icones img {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.82;
+  filter: drop-shadow(0 6px 10px rgba(9, 45, 76, 0.08));
+}
+
 .hero h1 {
   margin: 0;
   color: #111;
@@ -85,7 +112,6 @@
   justify-content: center;
   gap: 9px;
   padding: 0;
-  margin-top: clamp(22px, 3vw, 34px);
   list-style: none;
 }
 
@@ -119,4 +145,10 @@
 .detalhe:hover {
   color: var(--coral);
   transform: rotate(-1deg);
+}
+
+@keyframes iconesHero {
+  to {
+    transform: translateX(-50%);
+  }
 }
