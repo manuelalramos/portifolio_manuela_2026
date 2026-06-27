@@ -85,6 +85,36 @@
   animation: livePulse 1.2s ease-in-out infinite;
 }
 
+.status-live-black {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #0d7c54;
+  border: 1px solid rgba(13, 124, 84, 0.28);
+  background: rgba(255, 255, 255, 0.849);
+  backdrop-filter: blur(10px);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-live-black::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: livePulse 1.2s ease-in-out infinite;
+}
+
 .projeto-info {
   display: grid;
   align-content: start;
