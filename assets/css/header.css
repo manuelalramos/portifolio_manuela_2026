@@ -1,0 +1,32 @@
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(14px, 3vw, 38px);
+  padding: 24px clamp(18px, 5vw, 72px);
+  transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+.topo.com-fundo {
+  padding-block: 14px;
+  background: rgba(251, 247, 239, 0.9);
+  box-shadow: 0 12px 36px rgba(9, 45, 76, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  width: clamp(74px, 8vw, 118px);
+}
+
+.logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

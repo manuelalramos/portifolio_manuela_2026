@@ -1,10 +1,11 @@
 @import url("./base.css");
+@import url("./header.css");
 @import url("./menu.css");
 @import url("./hero.css");
 @import url("./about.css");
-@import url("./files.css");
-@import url("contact.css");
-@import url("certificados.css");
-@import url("footer.css");
-
-
+@import url("./projetos.css");
+@import url("./processo.css");
+@import url("./contact.css");
+@import url("./footer.css");
+@import url("./certificados.css");
+@import url("./responsividade.css");
