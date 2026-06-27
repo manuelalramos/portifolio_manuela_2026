@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.sobre.secao {
+  padding-top: clamp(52px, 7vw, 96px);
+}
+
 .sobre h2 {
   margin: 0;
   color: rgb(9, 45, 76);
@@ -58,6 +62,7 @@
   font-weight: 800;
   text-align: center;
   transform: rotate(-2deg);
+  cursor: pointer;
 }
 
 .selos li:hover{
@@ -127,14 +132,35 @@
   transform: translateY(-2px);
 }
 
-.botao-sobre-destaque {
+.botao-sobre-cv {
   border-color: var(--coral);
   color: var(--coral);
 }
 
-.botao-sobre-destaque:hover {
+.botao-sobre-cv:hover {
   background: var(--coral);
   border-color: var(--coral);
+}
+
+.botao-sobre-certificados {
+  border-color: var(--azul);
+  color: var(--azul);
+}
+
+.botao-sobre-certificados:hover {
+  background: var(--azul);
+  border-color: var(--azul);
+}
+
+.botao-sobre-projetos {
+  border-color: #6d8f2c;
+  color: #6d8f2c;
+}
+
+.botao-sobre-projetos:hover {
+  background: #6d8f2c;
+  border-color: #6d8f2c;
+  color: var(--off-white);
 }
 
 .fa-download {

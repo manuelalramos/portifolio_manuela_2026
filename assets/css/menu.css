@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(8px, 1.35vw, 20px);
+  gap: clamp(18px, 3vw, 56px);
   color: var(--azul-escuro);
   font-family: var(--fonte-segundaria);
   font-size: clamp(1.55rem, 1.8vw, 2rem);
@@ -63,8 +63,15 @@
 }
 
 .menu a:hover::after,
-.menu a:focus-visible::after {
+.menu a:focus-visible::after,
+.menu a.ativo::after,
+.menu a[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+.menu a.ativo,
+.menu a[aria-current="page"] {
+  color: var(--coral);
 }
 
 @media (max-width: 780px) {

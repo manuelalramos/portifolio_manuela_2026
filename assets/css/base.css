@@ -75,7 +75,23 @@ button {
 }
 
 .cursor {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(185, 207, 101, 0.5) 0%, rgba(239, 112, 103, 0.22) 42%, transparent 72%);
+  filter: blur(5px);
+  transform: translate3d(-999px, -999px, 0);
+  transition: opacity 0.18s ease;
+}
+
+.cursor.cursor-ativo {
+  opacity: 1;
 }
 
 .entrada {
@@ -144,6 +160,18 @@ button {
 .passagem-scroll {
   will-change: opacity, transform;
   transition: opacity 0.16s linear, transform 0.16s ease-out;
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.revelar-visivel {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .barra-scroll {
@@ -224,6 +252,12 @@ button {
   }
 }
 
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -233,5 +267,15 @@ button {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .revelar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .cursor {
+    display: none;
   }
 }

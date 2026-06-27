@@ -45,9 +45,9 @@
     <nav class="menu" aria-label="Menu principal">
       <a href="#inicio">home</a>
       <a href="#sobre">sobre</a>
-      <a href="#projetos">projetos live</a>
-      <a href="./pages/certificados.html">certificados</a>
+      <a href="#projetos">projetos</a>
       <a href="#contato">contato</a>
+      <a href="./pages/certificados.html">certificados</a>
     </nav>
   </header>
 
@@ -72,10 +72,6 @@
           <li>UX/UI</li>
         </ul>
       </div>
-
-      <a class="botao-scroll" href="#sobre" aria-label="Ir para a secao sobre">
-        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
-      </a>
     </section>
 
     <section class="sobre secao" id="sobre">
@@ -100,12 +96,12 @@
         </p>
 
         <div class="acoes-sobre">
-          <a class="botao-sobre botao-sobre-destaque" href="./assets/media/Currículo Manuela Ramos 2026.pdf" download>
+          <a class="botao-sobre botao-sobre-cv" href="./assets/media/Currículo Manuela Ramos 2026.pdf" download>
             baixar CV
             <i class="fa-solid fa-download" aria-hidden="true"></i>
           </a>
-          <a class="botao-sobre" href="./pages/certificados.html">ver certificados</a>
-          <a class="botao-sobre" href="#projetos">ver projetos live</a>
+          <a class="botao-sobre botao-sobre-certificados" href="./pages/certificados.html">ver certificados</a>
+          <a class="botao-sobre botao-sobre-projetos" href="#projetos">ver projetos</a>
         </div>
       </div>
 
@@ -136,7 +132,7 @@
     <section class="home-projetos secao" id="projetos">
       <div class="secao-cabecalho">
         <p class="rabisco detalhe">rodando agora</p>
-        <h2>Projetos live</h2>
+        <h2>Projetos</h2>
         <p>
           Sites e interfaces publicados, com link para acessar o projeto e também para ver o código no GitHub.
         </p>
@@ -146,8 +142,7 @@
         <article class="projeto-card">
           <a class="projeto-media projeto-media-portfolio" href="#inicio" aria-label="Abrir projeto Portfolio Manuela">
             <span class="status-live">live</span>
-            <video src="./assets/media/projetos/portfolio.mp4" muted autoplay loop playsinline preload="metadata" aria-label="Vídeo do projeto Portfolio pessoal"></video>
-            <span class="projeto-media-placeholder" aria-hidden="true">adicionar vídeo</span>
+            <img src="./assets/media/projetos/print-portfolio.png" alt="Print do projeto Portfolio pessoal" />
           </a>
           <div class="projeto-info">
             <h3>Portfolio pessoal</h3>
@@ -171,8 +166,7 @@
         <article class="projeto-card">
           <a class="projeto-media projeto-media-site" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir GitHub da Manuela">
             <span class="status-live">live</span>
-            <video src="./assets/media/projetos/interfaces-web.mp4" muted autoplay loop playsinline preload="metadata" aria-label="Vídeo do projeto Interfaces Web"></video>
-            <span class="projeto-media-placeholder" aria-hidden="true">adicionar vídeo</span>
+            <img src="./assets/media/projetos/print-interfaces-web.png" alt="Print do projeto Interfaces Web" />
           </a>
           <div class="projeto-info">
             <h3>Interfaces Web</h3>
@@ -198,8 +192,7 @@
         <article class="projeto-card">
           <a class="projeto-media projeto-media-app" href="https://github.com/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir repositorios da Manuela">
             <span class="status-live">live</span>
-            <video src="./assets/media/projetos/javascript.mp4" muted autoplay loop playsinline preload="metadata" aria-label="Vídeo do projeto JavaScript"></video>
-            <span class="projeto-media-placeholder" aria-hidden="true">adicionar vídeo</span>
+            <img src="./assets/media/projetos/print-javascript.png" alt="Print do projeto JavaScript" />
           </a>
           <div class="projeto-info">
             <h3>Projetos JavaScript</h3>
@@ -224,13 +217,55 @@
       </div>
     </section>
 
+    <section class="processo secao" id="processo">
+      <div class="secao-cabecalho">
+        <p class="rabisco detalhe">do briefing ao deploy</p>
+        <h2>Como funciona</h2>
+        <p>
+          Cada projeto nasce com escuta, planejamento e cuidado visual. A ideia é transformar sua necessidade em uma
+          entrega clara, responsiva e pronta para ser usada.
+        </p>
+      </div>
+
+      <ol class="processo-linha" aria-label="Etapas do projeto">
+        <li>
+          <span>01</span>
+          <h3>Entendimento</h3>
+          <p>Organizo objetivos, público, referências, conteúdo e funcionalidades para definir um escopo realista.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Design</h3>
+          <p>Penso na identidade, na experiência de uso e na responsividade antes de transformar a interface em código.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Desenvolvimento</h3>
+          <p>Construo páginas e interfaces com HTML, CSS, JavaScript e boas práticas para manter o projeto organizado.</p>
+        </li>
+        <li>
+          <span>04</span>
+          <h3>Entrega</h3>
+          <p>Reviso detalhes, ajusto telas pequenas, preparo links e deixo o projeto pronto para apresentar ou publicar.</p>
+        </li>
+      </ol>
+    </section>
+
     <section class="contato secao" id="contato">
-      <p class="rabisco detalhe">vamos conversar?</p>
-      <h2>Faço projetos web e estou aberta a propostas, parcerias e oportunidades em tecnologia.</h2>
+      <p class="rabisco detalhe">vamos construir?</p>
+      <h2>Seu próximo projeto começa aqui.</h2>
+      <p class="contato-resumo">
+        Tem um projeto em mente? Vamos conversar sobre tornar sua ideia realidade, pensando em design,
+        desenvolvimento, presença digital e uma entrega que faça sentido para o seu momento.
+      </p>
 
       <address class="links" aria-label="Links de contato">
         <a href="mailto:contato.manuelalramos@gmail.com" aria-label="Enviar email">
           <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
         </a>
 
         <a href="https://www.linkedin.com/in/manuelalramos" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn">
@@ -245,29 +280,37 @@
   </main>
 
   <footer class="footer-site">
-    <section class="footer-marca" aria-label="Resumo profissional">
-      <img src="./assets/media/logo_branca.png" alt="Manuela Ramos" onerror="this.onerror=null;this.src='./assets/media/logo_azul.png';this.classList.add('logo-fallback')" />
-      <p>Desenvolvimento web, sistemas e produtos digitais com atenção a código, interface e comunicação.</p>
-    </section>
+    <div class="footer-grid">
+      <section class="footer-marca" aria-label="Resumo profissional">
+        <img src="./assets/media/logo_branca.png" alt="Manuela Ramos" onerror="this.onerror=null;this.src='./assets/media/logo_azul.png';this.classList.add('logo-fallback')" />
+        <p>Desenvolvimento web, sistemas e produtos digitais com atenção a código, interface e comunicação.</p>
+      </section>
 
-    <section class="footer-coluna" aria-labelledby="footer-projetos">
-      <h2 id="footer-projetos">Projetos</h2>
-      <p>Faço sites, landing pages, interfaces responsivas e melhorias para presença digital.</p>
-      <a class="footer-cta" href="#contato"><i class="fa-solid fa-briefcase"></i> Propor projeto</a>
-    </section>
-
-    <address class="footer-coluna" aria-labelledby="footer-contato">
-      <h2 id="footer-contato">Contato</h2>
-      <a href="mailto:contato.manuelalramos@gmail.com"> <i class="fa-solid fa-envelope"></i>contato.manuelalramos@gmail.com</a>
-      <nav class="footer-social" aria-label="Redes sociais">
-        <a href="https://www.linkedin.com/in/manuelalramos" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
-        <a href="https://github.com/manuelalramos" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+      <nav class="footer-coluna" aria-labelledby="footer-menu">
+        <h2 id="footer-menu">Menu</h2>
+        <a href="#inicio">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#processo">Processo</a>
+        <a href="./pages/certificados.html">Certificados</a>
       </nav>
-    </address>
+
+      <address class="footer-coluna" aria-labelledby="footer-contato">
+        <h2 id="footer-contato">Contato</h2>
+        <a href="mailto:contato.manuelalramos@gmail.com">contato.manuelalramos@gmail.com</a>
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+        <span>São Paulo, Brasil</span>
+      </address>
+
+      <nav class="footer-coluna" aria-labelledby="footer-social">
+        <h2 id="footer-social">Social</h2>
+        <a href="https://www.linkedin.com/in/manuelalramos" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/manuelalramos" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
 
     <div class="footer-base">
-      <p>&copy; 2026 Manuela de Lima Ramos.</p>
-      <p>Aberta a propostas de projetos e oportunidades.</p>
+      <p>&copy; 2026 Manuela de Lima Ramos. Todos os direitos reservados.</p>
     </div>
   </footer>
 </body>
