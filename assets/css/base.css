@@ -1,12 +1,12 @@
 :root {
   --off-white: #fbf7ef;
   --azul: #18476f;
-  --azul-escuro: rgb(9, 45, 76);
+  --azul-escuro: #092d4c;
   --azul-claro: #dcecf4;
-  --coral: rgb(239, 112, 103);
+  --coral: #ef7067;
   --verde: #b9cf65;
   --linha: rgba(9, 45, 76, 0.22);
-  --sombra: 0 22px 55px rgba(9, 45, 76, 0.14);
+  --sombra: 0 18px 44px rgba(9, 45, 76, 0.12);
   --fonte-primaria: "Inter", sans-serif;
   --fonte-segundaria: "Gaegu", cursive;
   --fonte-terciaria: "La Belle Aurore", cursive;
@@ -15,7 +15,6 @@
 
 * {
   box-sizing: border-box;
-  cursor: url('../images/cursor.svg'),auto;
 }
 
 html {
@@ -25,7 +24,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
@@ -33,7 +32,7 @@ body {
   color: #102233;
   background: var(--off-white);
   font-family: var(--fonte-primaria);
-  
+  /* cursor: url("../media/cursor.svg") 3 3, auto; */
 }
 
 ::-webkit-scrollbar {
@@ -45,6 +44,20 @@ a {
   text-decoration: none;
 }
 
+/* button,
+a,
+[role="button"],
+[tabindex],
+.projeto-card,
+.certificado-card {
+  cursor: url("../media/hand-cursor.svg") 7 4, pointer;
+}
+
+button *,
+a * {
+  cursor: url("../media/hand-cursor.svg") 7 4, pointer;
+} */
+
 button {
   font: inherit;
 }
@@ -54,23 +67,15 @@ button {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 24% 18%, rgba(90, 174, 216, 0.12), transparent 24%),
-    radial-gradient(circle at 84% 74%, rgba(239, 112, 103, 0.1), transparent 25%),
-    repeating-linear-gradient(0deg, rgba(9, 45, 76, 0.025) 0 1px, transparent 1px 7px),
+    linear-gradient(120deg, rgba(220, 236, 244, 0.7), transparent 34%),
+    radial-gradient(circle at 85% 18%, rgba(239, 112, 103, 0.16), transparent 28%),
+    radial-gradient(circle at 78% 78%, rgba(185, 207, 101, 0.14), transparent 24%),
+    repeating-linear-gradient(0deg, rgba(9, 45, 76, 0.018) 0 1px, transparent 1px 8px),
     var(--off-white);
 }
 
 .cursor {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 3;
-  background: radial-gradient(circle, rgba(90, 174, 216, 0.22), transparent 66%);
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .entrada {
@@ -87,15 +92,14 @@ button {
 }
 
 .entrada img {
-  width: min(360px, 72vw);
-  filter: invert(22%) sepia(56%) saturate(857%) hue-rotate(168deg) brightness(50%);
+  width: min(220px, 54vw);
   animation: logoEntrada 1.2s ease-in-out infinite alternate;
 }
 
 .entrada span {
   font-family: var(--fonte-segundaria);
   letter-spacing: 0.04em;
-  font-size: var(--tamanho-fonte-segundaria);
+  font-size: 1.9rem;
 }
 
 .entrada span::after {
@@ -115,6 +119,26 @@ button {
 .secao {
   position: relative;
   padding: clamp(78px, 11vw, 150px) clamp(22px, 6vw, 92px);
+}
+
+.secao-cabecalho {
+  max-width: 760px;
+}
+
+.secao-cabecalho h2 {
+  margin: 0;
+  color: var(--azul-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.2rem, 9vw, 10rem);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.secao-cabecalho p:not(.detalhe) {
+  margin: 22px 0 0;
+  color: #31485f;
+  font-size: clamp(1.6rem, 1.8vw, 2rem);
+  line-height: 1.65;
 }
 
 .passagem-scroll {
@@ -191,8 +215,12 @@ button {
 }
 
 @media (max-width: 640px) {
-  .cursor {
-    display: none;
+  .entrada span {
+    font-size: 1.8rem;
+  }
+
+  .secao {
+    padding-inline: 18px;
   }
 }
 

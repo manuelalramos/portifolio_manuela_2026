@@ -1,56 +1,101 @@
-footer {
-  min-height: 95px;
+.footer-site {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  gap: 24px;
-  padding: 24px 28px;
+  grid-template-columns: minmax(280px, 1.4fr) minmax(170px, 0.7fr) minmax(220px, 0.8fr);
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(52px, 7vw, 82px) clamp(22px, 6vw, 92px) 30px;
   color: var(--off-white);
-  background: var(--azul);
-  font-family: var(--fonte-terciaria);
-  font-size: 2rem;
+  background: var(--azul-escuro);
 }
 
-footer p {
+.footer-site p,
+.footer-site h2 {
   margin: 0;
 }
 
-footer .direitos {
-  justify-self: start;
-  margin: 0 2rem;
+.footer-marca {
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
-footer .email {
-  justify-self: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  transition: 0.5s;
+.footer-marca img {
+  width: min(122px, 38vw);
+  height: auto;
 }
 
-footer .email:hover {
+.footer-marca img.logo-fallback {
+  filter: brightness(0) invert(1);
+}
+
+.footer-marca p,
+.footer-coluna p {
+  max-width: 420px;
+  color: rgba(251, 247, 239, 0.78);
+  font-size: 1.55rem;
+  line-height: 1.65;
+}
+
+.footer-coluna {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  font-style: normal;
+}
+
+.footer-coluna h2 {
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-coluna a {
+  width: fit-content;
+  color: var(--off-white);
+  font-size: 1.55rem;
+  line-height: 1.4;
   text-decoration: none;
-  scale: 1.02;
-  transform: rotate(-2deg);
-  transition: 0.5s;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-footer .ano {
-  justify-self: end;
-  margin: 0 2rem;
+.footer-coluna a:hover {
+  color: #f7c7d4;
+  transform: translateX(3px);
 }
 
-@media (max-width: 760px) {
-  footer {
+.footer-coluna .footer-cta {
+  font-family: var(--fonte-segundaria);
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+
+.footer-social {
+  display: grid;
+  gap: 12px;
+}
+
+.footer-base {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 22px;
+  color: rgba(251, 247, 239, 0.68);
+  font-size: 1.3rem;
+}
+
+.footer-social .fa-github, .fa-linkedin-in, .fa-envelope{
+  margin-right: 5px;
+}
+
+
+
+@media (max-width: 820px) {
+  .footer-site {
     grid-template-columns: 1fr;
-    gap: 10px;
-    text-align: center;
   }
 
-  footer .direitos,
-  footer .email,
-  footer .ano {
-    justify-self: center;
+  .footer-base {
+    display: grid;
   }
 }

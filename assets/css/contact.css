@@ -1,7 +1,7 @@
 .contato {
-  min-height: 80vh;
   display: grid;
   align-content: center;
+  padding-top: clamp(42px, 6vw, 84px);
   scroll-margin-top: 100px;
 }
 
@@ -10,8 +10,8 @@
   margin: 0;
   color: var(--azul-escuro);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 10rem;
-  line-height: 0.9;
+  font-size: clamp(4rem, 8vw, 9rem);
+  line-height: 0.94;
   font-weight: 400;
 }
 
@@ -21,48 +21,32 @@
   gap: 20px;
   align-items: center;
   margin-top: 36px;
+  font-style: normal;
 }
 
 .links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(9, 45, 76, 0.14);
+  border-radius: 50%;
   color: var(--azul-escuro);
-  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.52);
+  font-size: 2.4rem;
   cursor: pointer;
-  margin: 0 1.5rem;
-  animation: pulsarIcone 1.8s ease-in-out infinite;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.links a:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.links a:nth-child(3) {
-  animation-delay: 0.4s;
+  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .links a:hover {
-  color: var(--coral);
-  transform: scale(1.28);
-}
-
-@keyframes pulsarIcone {
-  0%,
-  100% {
-    transform: scale(0.92);
-  }
-
-  50% {
-    transform: scale(1.18);
-  }
+  color: var(--off-white);
+  background: var(--azul);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 640px) {
   .contato h2 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
+    font-size: clamp(3.4rem, 13vw, 5rem);
   }
 }
