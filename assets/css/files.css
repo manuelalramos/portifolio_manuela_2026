@@ -7,7 +7,7 @@
 
 .projetos-live {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  grid-template-columns: repeat(3,1fr);
   gap: clamp(18px, 3vw, 28px);
 }
 
@@ -173,10 +173,11 @@
 .projeto-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 24px 54px rgba(9, 45, 76, 0.16);
+  border: var(--verde) 0.5px solid;
 }
 
 .projeto-link:hover {
-  color: var(--azul-escuro);
+  color: var(--roxo);
   transform: translateY(-2px) scale(1.02);
 }
 
