@@ -21,6 +21,7 @@ function fecharMenu() {
   }
 
   topo.classList.remove("menu-aberto");
+  document.documentElement.classList.remove("menu-aberto-site");
   botaoMenu.setAttribute("aria-expanded", "false");
   botaoMenu.setAttribute("aria-label", "Abrir menu");
   botaoMenu.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
@@ -32,6 +33,7 @@ function alternarMenu() {
   }
 
   const menuAberto = topo.classList.toggle("menu-aberto");
+  document.documentElement.classList.toggle("menu-aberto-site", menuAberto);
   botaoMenu.setAttribute("aria-expanded", String(menuAberto));
   botaoMenu.setAttribute("aria-label", menuAberto ? "Fechar menu" : "Abrir menu");
   botaoMenu.innerHTML = menuAberto

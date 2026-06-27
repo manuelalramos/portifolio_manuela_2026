@@ -31,6 +31,10 @@
 }
 
 @media (max-width: 780px) {
+  html.menu-aberto-site {
+    overflow: hidden;
+  }
+
   .topo {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -41,37 +45,48 @@
     backdrop-filter: blur(14px);
   }
 
+  .topo.menu-aberto {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
   .topo.com-fundo {
     padding-block: 12px;
   }
 
   .logo-link {
+    position: relative;
+    z-index: 45;
     width: 84px;
   }
 
   .menu-botao {
+    position: relative;
+    z-index: 45;
     display: grid;
   }
 
   .menu {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 18px;
-    right: 18px;
-    width: auto;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    width: 100%;
+    min-height: 100dvh;
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 10px;
-    border: 1px solid rgba(9, 45, 76, 0.12);
-    border-radius: 8px;
+    gap: 0;
+    padding: 118px 26px 42px;
+    border: 0;
+    border-radius: 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    background: rgba(251, 247, 239, 0.96);
-    box-shadow: 0 18px 44px rgba(9, 45, 76, 0.14);
-    font-size: 1.45rem;
-    transform: translateY(-8px);
+    background: #fffdf8;
+    box-shadow: none;
+    font-size: clamp(3.6rem, 13vw, 6.2rem);
+    transform: translateY(-100%);
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
 
@@ -83,14 +98,17 @@
   }
 
   .menu a {
-    justify-content: center;
-    min-height: 36px;
-    padding: 0 8px;
-    border: 1px solid var(--linha);
-    border-radius: 999px;
-    background: rgba(251, 247, 239, 0.72);
-    line-height: 1;
-    text-align: center;
+    justify-content: flex-start;
+    min-height: 68px;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(9, 45, 76, 0.12);
+    border-radius: 0;
+    background: transparent;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 0.95;
+    text-align: left;
     white-space: normal;
   }
 
@@ -100,8 +118,8 @@
 
   .menu a.ativo,
   .menu a[aria-current="page"] {
-    border-color: rgba(239, 112, 103, 0.38);
-    background: rgba(239, 112, 103, 0.08);
+    border-color: rgba(239, 112, 103, 0.26);
+    background: transparent;
   }
 
   .secao {
@@ -387,9 +405,12 @@
   }
 
   .certificados-abertura {
+    width: 100%;
+    max-width: 100%;
     min-height: auto;
     padding-top: 124px;
     padding-bottom: 8px;
+    overflow: hidden;
   }
 
   .certificados-abertura p:last-child {
@@ -397,7 +418,9 @@
   }
 
   .certificados-abertura h1 {
-    font-size: clamp(4.6rem, 18vw, 7rem);
+    max-width: 100%;
+    font-size: clamp(4.2rem, 14.5vw, 5.8rem);
+    line-height: 0.86;
   }
 
   .certificados-grade,
@@ -438,7 +461,7 @@
   }
 
   .menu a {
-    min-height: 34px;
+    min-height: 62px;
   }
 
   .hero {
@@ -459,6 +482,10 @@
 
   .certificados-abertura {
     padding-top: 118px;
+  }
+
+  .certificados-abertura h1 {
+    font-size: clamp(4rem, 14vw, 5.2rem);
   }
 
   .secao {
