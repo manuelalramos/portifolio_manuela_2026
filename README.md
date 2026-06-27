@@ -107,7 +107,7 @@ Depois é só abrir o `index.html` no navegador, ou usar a extensão **Live Serv
 💻 Desenvolvimento Web • UX/UI • Experiências Digitais
 
 <p align="left">
-  <a href="mailto:contato.manuelalramos@gmail.com">
+  <a href="mailto:contato@manuelalramos.com.br">
     <img src="https://img.shields.io/badge/Email-7c3aed?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
   <a href="https://linkedin.com/in/manuelalramos">
