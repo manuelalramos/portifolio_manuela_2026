@@ -102,36 +102,26 @@ PORTFOLIO/
 │
 ├── assets/
 │   ├── css/
+│   │   ├── main.css
 │   │   ├── base.css
+│   │   ├── header.css
+│   │   ├── menu.css
 │   │   ├── hero.css
 │   │   ├── about.css
-│   │   ├── menu.css
-│   │   ├── files.css
+│   │   ├── projetos.css
+│   │   ├── processo.css
 │   │   ├── contact.css
 │   │   ├── footer.css
-│   │   ├── projetos.css
-│   │   ├── instagram.css
-│   │   ├── ux.css
-│   │   ├── ads.css
-│   │   └── codigo.css
+│   │   ├── certificados.css
+│   │   └── responsividade.css
 │   │
 │   ├── js/
-│   │   └── main.js
+│   │   └── script.js
 │   │
-│   ├── cv/
-│   │
-│   └── pages/
-│       ├── projetos.html
-│       ├── instagram.html
-│       ├── ux.html
-│       ├── ads.html
-│       └── codigo.html
+│   └── media/
 │
-└── projetos/
-    ├── instagram/
-    ├── ux/
-    ├── ads/
-    └── codigo/
+└── pages/
+    └── certificados.html
 ```
 
 ---
@@ -141,11 +131,7 @@ PORTFOLIO/
 | Página | Descrição |
 |---|---|
 | `index.html` | Home principal do portfolio |
-| `projetos.html` | Índice de projetos |
-| `instagram.html` | Projetos de social media |
-| `ux.html` | Projetos de UX/UI |
-| `ads.html` | Projetos acadêmicos e gerais |
-| `codigo.html` | Projetos de desenvolvimento |
+| `pages/certificados.html` | Lista de certificados |
 
 ---
 
@@ -156,13 +142,16 @@ A estrutura foi separada por áreas para facilitar escalabilidade e manutenção
 ### Separação dos estilos
 
 - `base.css` → variáveis globais e estilos compartilhados;
+- `header.css` → topo fixo e logo;
+- `menu.css` → navegação;
 - `hero.css` → hero section;
 - `about.css` → seção sobre mim;
-- `menu.css` → navegação;
-- `files.css` → categorias/projetos;
+- `projetos.css` → projetos publicados;
+- `processo.css` → briefing ao deploy;
 - `contact.css` → contato;
 - `footer.css` → rodapé;
-- páginas específicas possuem CSS próprio.
+- `certificados.css` → página de certificados;
+- `responsividade.css` → ajustes de tablet, mobile e dispositivos touch.
 
 ---
 

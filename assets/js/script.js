@@ -1,6 +1,8 @@
 const topo = document.querySelector("#topo");
 const entrada = document.querySelector("#entrada");
 const cursor = document.querySelector("#cursor");
+const botaoMenu = document.querySelector(".menu-botao");
+const menuPrincipal = document.querySelector(".menu");
 const linksComAncora = document.querySelectorAll("a[href*='#']");
 const linksDoMenu = document.querySelectorAll(".menu a");
 const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -11,6 +13,30 @@ function mudarTopo() {
   }
 
   topo.classList.toggle("com-fundo", window.scrollY > 40);
+}
+
+function fecharMenu() {
+  if (!topo || !botaoMenu) {
+    return;
+  }
+
+  topo.classList.remove("menu-aberto");
+  botaoMenu.setAttribute("aria-expanded", "false");
+  botaoMenu.setAttribute("aria-label", "Abrir menu");
+  botaoMenu.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+}
+
+function alternarMenu() {
+  if (!topo || !botaoMenu) {
+    return;
+  }
+
+  const menuAberto = topo.classList.toggle("menu-aberto");
+  botaoMenu.setAttribute("aria-expanded", String(menuAberto));
+  botaoMenu.setAttribute("aria-label", menuAberto ? "Fechar menu" : "Abrir menu");
+  botaoMenu.innerHTML = menuAberto
+    ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+    : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 }
 
 function copiarTexto(texto) {
@@ -97,7 +123,32 @@ function prepararLinksSuaves() {
         block: "start"
       });
       history.pushState(null, "", url.hash);
+      fecharMenu();
     });
+  });
+}
+
+function prepararMenuMobile() {
+  if (!botaoMenu || !menuPrincipal) {
+    return;
+  }
+
+  botaoMenu.addEventListener("click", alternarMenu);
+
+  linksDoMenu.forEach(function (link) {
+    link.addEventListener("click", fecharMenu);
+  });
+
+  window.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape") {
+      fecharMenu();
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 780) {
+      fecharMenu();
+    }
   });
 }
 
@@ -213,6 +264,42 @@ function prepararLuzDoCursor() {
   });
 }
 
+function prepararScrollFlutuante() {
+  const mediaDesktop = window.matchMedia("(min-width: 681px)");
+  const barra = document.createElement("div");
+  const thumb = document.createElement("div");
+
+  barra.className = "scrollbar-flutuante";
+  thumb.className = "scrollbar-flutuante-thumb";
+  barra.appendChild(thumb);
+  document.body.appendChild(barra);
+
+  function atualizarScroll() {
+    const alturaPagina = document.documentElement.scrollHeight;
+    const alturaTela = document.documentElement.clientHeight;
+    const podeMostrar = mediaDesktop.matches && alturaPagina > alturaTela;
+
+    barra.style.display = podeMostrar ? "block" : "none";
+
+    if (!podeMostrar) {
+      return;
+    }
+
+    const alturaTrilho = barra.clientHeight;
+    const alturaThumb = Math.max(44, (alturaTela / alturaPagina) * alturaTrilho);
+    const limiteScroll = alturaPagina - alturaTela;
+    const limiteThumb = alturaTrilho - alturaThumb;
+    const posicaoThumb = limiteScroll > 0 ? (window.scrollY / limiteScroll) * limiteThumb : 0;
+
+    thumb.style.height = alturaThumb + "px";
+    thumb.style.transform = "translateY(" + posicaoThumb + "px)";
+  }
+
+  window.addEventListener("scroll", atualizarScroll);
+  window.addEventListener("resize", atualizarScroll);
+  atualizarScroll();
+}
+
 if (entrada) {
   document.documentElement.classList.add("entrada-ativa");
 
@@ -230,7 +317,9 @@ window.addEventListener("resize", atualizarMenuAtivo);
 
 mudarTopo();
 prepararLinksSuaves();
+prepararMenuMobile();
 prepararCopiaDeChave();
 prepararRevelacao();
 prepararLuzDoCursor();
+prepararScrollFlutuante();
 atualizarMenuAtivo();
