@@ -63,7 +63,7 @@
 .links a:hover {
   animation: none;
   color: var(--coral);
-  transform: translateY(-4px) scale(1.08);
+  transform: translateY(-4px) scale(1.08) 0.3s;
 }
 
 @keyframes pulsarIconeContato {
