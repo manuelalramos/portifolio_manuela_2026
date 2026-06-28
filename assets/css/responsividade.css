@@ -133,12 +133,12 @@
   }
 
   .hero::before {
-    inset: 92px 14px 34px;
+    inset: 74px 14px 24px;
     border-radius: 22px;
   }
 
-  .hero h1 {
-    font-size: clamp(6rem, 22vw, 9rem);
+  .hero-logo-titulo {
+    width: min(520px, 82vw);
   }
 
   .hero-resumo {
@@ -173,7 +173,7 @@
   }
 
   .hero::before {
-    inset: 92px 14px 34px;
+    inset: 68px 14px 22px;
   }
 
   .hero-tags {
@@ -469,7 +469,7 @@
   }
 
   .hero::before {
-    inset: 86px 12px 30px;
+    inset: 66px 12px 22px;
   }
 
   .hero-tags {
