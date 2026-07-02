@@ -214,6 +214,10 @@ button {
   will-change: height, transform;
 }
 
+html.entrada-ativa .scrollbar-flutuante {
+  display: none !important;
+}
+
 @keyframes pontosEntrada {
   0% {
     content: "";
