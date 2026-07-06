@@ -159,7 +159,8 @@ function atualizarMenuAtivo() {
     return;
   }
 
-  const paginaCertificados = window.location.pathname.includes("certificados.html");
+  const paginaCertificados = window.location.pathname.includes("certificados.html")
+    || window.location.pathname.includes("certificates.html");
   let idAtivo = "";
 
   if (paginaCertificados) {
@@ -186,9 +187,11 @@ function atualizarMenuAtivo() {
 
   linksDoMenu.forEach(function (link) {
     const href = link.getAttribute("href") || "";
-    const ativo = paginaCertificados
-      ? href.includes("certificados.html")
-      : href.endsWith("#" + idAtivo);
+    const linkDeIdioma = link.classList.contains("idioma-link");
+    const linkDeCertificados = href.includes("certificados.html") || href.includes("certificates.html");
+    const ativo = !linkDeIdioma && (paginaCertificados
+      ? linkDeCertificados
+      : href.endsWith("#" + idAtivo));
 
     link.classList.toggle("ativo", ativo);
 

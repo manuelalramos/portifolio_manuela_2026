@@ -122,6 +122,17 @@
     background: transparent;
   }
 
+  .menu .idioma-link {
+    min-height: 38px;
+    width: max-content;
+    padding: 0 16px;
+    border: 1px solid rgba(9, 45, 76, 0.2);
+    border-radius: 999px;
+    font-family: var(--fonte-primaria);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
   .secao {
     scroll-margin-top: 98px;
   }

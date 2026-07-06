@@ -16,6 +16,20 @@
   white-space: nowrap;
 }
 
+.menu .idioma-link {
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid rgba(9, 45, 76, 0.2);
+  border-radius: 999px;
+  background: rgba(251, 247, 239, 0.68);
+  font-family: var(--fonte-primaria);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .menu a::after {
   content: "";
   position: absolute;
@@ -39,6 +53,18 @@
 .menu a.ativo,
 .menu a[aria-current="page"] {
   color: var(--coral);
+}
+
+.menu .idioma-link::after {
+  display: none;
+}
+
+.menu .idioma-link:hover,
+.menu .idioma-link:focus-visible {
+  border-color: rgba(239, 112, 103, 0.38);
+  color: var(--coral);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .menu-botao {
