@@ -123,6 +123,7 @@
   }
 
   .menu .idioma-link {
+    margin-top: 12px;
     min-height: 38px;
     width: max-content;
     padding: 0 16px;
