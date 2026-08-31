@@ -273,21 +273,23 @@ function prepararScrollFlutuante() {
   const mediaDesktop = window.matchMedia("(min-width: 681px)");
   const barra = document.createElement("div");
   const thumb = document.createElement("div");
+  let arrastando = false;
+  let deslocamentoDoClique = 0;
+  let metricasAtuais = null;
 
   barra.className = "scrollbar-flutuante";
   thumb.className = "scrollbar-flutuante-thumb";
+  barra.setAttribute("aria-hidden", "true");
   barra.appendChild(thumb);
   document.body.appendChild(barra);
 
-  function atualizarScroll() {
+  function obterMetricasScroll() {
     const alturaPagina = document.documentElement.scrollHeight;
     const alturaTela = document.documentElement.clientHeight;
     const podeMostrar = mediaDesktop.matches && alturaPagina > alturaTela;
 
-    barra.style.display = podeMostrar ? "block" : "none";
-
     if (!podeMostrar) {
-      return;
+      return null;
     }
 
     const margemThumb = 10;
@@ -295,11 +297,110 @@ function prepararScrollFlutuante() {
     const alturaThumb = Math.max(44, (alturaTela / alturaPagina) * alturaTrilho);
     const limiteScroll = alturaPagina - alturaTela;
     const limiteThumb = alturaTrilho - alturaThumb;
-    const posicaoThumb = margemThumb + (limiteScroll > 0 ? (window.scrollY / limiteScroll) * limiteThumb : 0);
 
-    thumb.style.height = alturaThumb + "px";
+    return {
+      margemThumb: margemThumb,
+      alturaThumb: alturaThumb,
+      limiteScroll: limiteScroll,
+      limiteThumb: limiteThumb
+    };
+  }
+
+  function rolarParaPosicaoDoThumb(posicaoThumb) {
+    const metricas = metricasAtuais || obterMetricasScroll();
+
+    if (!metricas || metricas.limiteThumb <= 0) {
+      return;
+    }
+
+    const posicaoNormalizada = Math.min(
+      metricas.limiteThumb,
+      Math.max(0, posicaoThumb - metricas.margemThumb)
+    );
+    const progresso = posicaoNormalizada / metricas.limiteThumb;
+
+    window.scrollTo({
+      top: progresso * metricas.limiteScroll,
+      behavior: "auto"
+    });
+  }
+
+  function atualizarScroll() {
+    metricasAtuais = obterMetricasScroll();
+    barra.style.display = metricasAtuais ? "block" : "none";
+
+    if (!metricasAtuais) {
+      return;
+    }
+
+    const posicaoThumb = metricasAtuais.margemThumb
+      + (metricasAtuais.limiteScroll > 0
+        ? (window.scrollY / metricasAtuais.limiteScroll) * metricasAtuais.limiteThumb
+        : 0);
+
+    thumb.style.height = metricasAtuais.alturaThumb + "px";
     thumb.style.transform = "translateY(" + posicaoThumb + "px)";
   }
+
+  thumb.addEventListener("pointerdown", function (evento) {
+    if (!mediaDesktop.matches) {
+      return;
+    }
+
+    metricasAtuais = obterMetricasScroll();
+
+    if (!metricasAtuais) {
+      return;
+    }
+
+    const retanguloThumb = thumb.getBoundingClientRect();
+
+    arrastando = true;
+    deslocamentoDoClique = evento.clientY - retanguloThumb.top;
+    barra.classList.add("arrastando");
+    thumb.setPointerCapture(evento.pointerId);
+    evento.preventDefault();
+  });
+
+  barra.addEventListener("pointerdown", function (evento) {
+    if (evento.target === thumb || !mediaDesktop.matches) {
+      return;
+    }
+
+    metricasAtuais = obterMetricasScroll();
+
+    if (!metricasAtuais) {
+      return;
+    }
+
+    const retanguloBarra = barra.getBoundingClientRect();
+    rolarParaPosicaoDoThumb(evento.clientY - retanguloBarra.top - (metricasAtuais.alturaThumb / 2));
+    evento.preventDefault();
+  });
+
+  thumb.addEventListener("pointermove", function (evento) {
+    if (!arrastando) {
+      return;
+    }
+
+    const retanguloBarra = barra.getBoundingClientRect();
+    rolarParaPosicaoDoThumb(evento.clientY - retanguloBarra.top - deslocamentoDoClique);
+  });
+
+  thumb.addEventListener("pointerup", function (evento) {
+    if (!arrastando) {
+      return;
+    }
+
+    arrastando = false;
+    barra.classList.remove("arrastando");
+    thumb.releasePointerCapture(evento.pointerId);
+  });
+
+  thumb.addEventListener("pointercancel", function () {
+    arrastando = false;
+    barra.classList.remove("arrastando");
+  });
 
   window.addEventListener("scroll", atualizarScroll);
   window.addEventListener("resize", atualizarScroll);
