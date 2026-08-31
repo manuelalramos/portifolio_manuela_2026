@@ -160,6 +160,12 @@
   color: var(--azul);
 }
 
+.projeto-link-block {
+  color: #d93636;
+  cursor: not-allowed;
+  user-select: none;
+}
+
 .projeto-link-atual {
   gap: 4px;
   color: #6d8f2c;
@@ -194,6 +200,35 @@
   color: var(--coral);
 }
 
+.projeto-link.projeto-link-block:hover,
+.projeto-link.projeto-link-block:focus-visible {
+  color: #d93636;
+  animation: tremerBloqueado 0.34s ease-in-out;
+  transform: none;
+}
+
+@keyframes tremerBloqueado {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-4px);
+  }
+
+  40% {
+    transform: translateX(4px);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(3px);
+  }
+}
 @keyframes livePulse {
   0%,
   100% {
